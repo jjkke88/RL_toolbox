@@ -3,6 +3,7 @@ from parameters import PMS_base as pms
 import threading
 import math
 
+
 class Storage(object):
     def __init__(self, agent, env, baseline, pms):
         self.paths = []
@@ -119,12 +120,3 @@ class Storage(object):
             ipdb.set_trace()
         return 1 - np.var(y - ypred) / (vary + 1e-8)
 
-
-class Rollout(threading.Thread):
-    def __init__(self, thread_number, agent, env, baseline):
-        super(Rollout, self).__init__()
-        self.thread_number = thread_number
-        self.storage = Storage(agent, env, baseline)
-
-    def run(self):
-        self.storage.get_single_path()
