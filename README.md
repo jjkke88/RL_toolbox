@@ -12,3 +12,6 @@
 ** get_paths
 ** process_paths
 * A new storage should have `agent, env, baseline, pms`
+
+# agent
+* get_action(ob): action, agent_info = agent.get_action(ob)
