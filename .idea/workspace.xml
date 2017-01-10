@@ -5,6 +5,39 @@
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/models_image_zooms/model_image_zooms" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/models_pool45_crops/model_pool45_crops" />
       <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/vgg16_weights.h5" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/caffepb.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/resolver.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/errors.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/graph.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/layers.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/shapes.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/network.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/transformer.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/transformers.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/net/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/net/net.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/history_storage.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/imageDealing.py" />
+      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/main.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/dqn-tensorflow/run.sh" afterPath="$USER_HOME$/PycharmProjects/dqn-tensorflow/run.sh" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/config.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/config.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/base.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/base.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/environment.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/environment.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/history.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/history.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/ops.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/ops.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/replay_memory.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/replay_memory.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/utils.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/utils.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/main.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/main.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/misc.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/modules.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/mountaincar.iml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/mountaincar.iml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/vcs.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/main.py" afterPath="$USER_HOME$/PycharmProjects/mountaincar/main.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar_image/README.md" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/README.md" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/agent/agent_continous_image.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/agent/agent_continous_image.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/experiment/main_multi_process.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/experiment/main_multi_process.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/parameters.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/parameters.py" />
@@ -12,6 +45,8 @@
       <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_testing.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_testing.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_training.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_training.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/pool45_crops_testing.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/pool45_crops_testing.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/gym/gym/envs/__init__.py" afterPath="$USER_HOME$/gym/gym/envs/__init__.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/gym/gym/envs/classic_control/pendulum.py" afterPath="$USER_HOME$/gym/gym/envs/classic_control/pendulum.py" />
       <change type="MODIFICATION" beforePath="$USER_HOME$/pybox2d/library/Box2D/Box2D.py" afterPath="$USER_HOME$/pybox2d/library/Box2D/Box2D.py" />
     </list>
     <ignored path="RL_toolbox.iws" />
@@ -33,109 +68,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/test/test.py">
+      <file leaf-file-name="DQN_agent.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RLToolbox/agent/DQN_agent.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+            <state relative-caret-position="-325">
+              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
               <folding>
-                <element signature="e#0#22#0" expanded="true" />
+                <element signature="e#0#23#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TRPO_agent.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
+      <file leaf-file-name="dqn_CartPole-v0.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiment/dqn_CartPole-v0.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+            <state relative-caret-position="382">
+              <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TRPO_parallel_agent.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_parallel_agent.py">
+      <file leaf-file-name="parameters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parameters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/setup.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="e#48#85#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gym_environment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/environment/gym_environment.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="e#143#161#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage_continous.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-              <folding>
-                <element signature="e#142#263#0" expanded="false" />
-                <element signature="e#304#1897#0" expanded="false" />
-                <element signature="e#1932#1995#0" expanded="false" />
-                <element signature="e#2041#3796#0" expanded="false" />
-                <element signature="e#3847#4212#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage_continous_parallel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous_parallel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TRPO.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/algorithm/TRPO.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trpo_parallel.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_parallel.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -151,12 +112,11 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/detection-2016-nipsws" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/PycharmProjects/mountaincar_image" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/parameters.py" />
         <option value="$PROJECT_DIR$/environment/gym_environment.py" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/agent/TRPO_agent.py" />
@@ -185,14 +145,25 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$USER_HOME$/detection-2016-nipsws/test.py" />
         <option value="$USER_HOME$/test/test.py" />
+        <option value="$PROJECT_DIR$/RLToolbox/experiment/dqn_mountaincar.py" />
+        <option value="$PROJECT_DIR$/RLToolbox/storage/storage_replay.py" />
+        <option value="$PROJECT_DIR$/RLToolbox/toolbox/sample/e_greedy.py" />
+        <option value="$USER_HOME$/PycharmProjects/mountaincar_image/parameters.py" />
+        <option value="$USER_HOME$/PycharmProjects/mountaincar_image/dqn.py" />
+        <option value="$PROJECT_DIR$/RLToolbox/agent/DQN_agent.py" />
+        <option value="$PROJECT_DIR$/experiment/dqn_mountaincar.py" />
+        <option value="$PROJECT_DIR$/experiment/dqn_InvertedPendulum-v1.py" />
+        <option value="$PROJECT_DIR$/experiment/dqn_Pendulum-v0.py" />
+        <option value="$PROJECT_DIR$/parameters.py" />
+        <option value="$PROJECT_DIR$/experiment/dqn_CartPole-v0.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="213" />
-    <option name="y" value="169" />
-    <option name="width" value="1845" />
-    <option name="height" value="1028" />
+    <option name="x" value="45" />
+    <option name="y" value="-6" />
+    <option name="width" value="1875" />
+    <option name="height" value="1086" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -237,6 +208,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RL_toolbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RL_toolbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -246,13 +231,13 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/gym" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/experiment" />
       <recent name="$PROJECT_DIR$/toolbox" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/experiment" />
       <recent name="$PROJECT_DIR$/toolbox/common" />
       <recent name="$PROJECT_DIR$/toolbox/math" />
     </key>
@@ -264,59 +249,8 @@
       <recent name="$USER_HOME$/test" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
-    <configuration default="false" name="trpo_continous" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RL_toolbox" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/trpo_continous.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="trpo_parallel" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RL_toolbox" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/trpo_parallel.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="RL_toolbox" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/test/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="trpo_continous (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.dqn_InvertedPendulum-v1">
+    <configuration default="false" name="dqn_mountaincar" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -328,24 +262,75 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RL_toolbox" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RLToolbox/experiment/trpo_continous.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RLToolbox/experiment/dqn_mountaincar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="trpo_parallel (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="dqn_mountaincar (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RLToolbox/experiment" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RL_toolbox" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RLToolbox/experiment/trpo_parallel.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/dqn_mountaincar.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/mountaincar_image" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="mountaincar" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/mountaincar_image/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="list_envs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/gym/examples/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="gym" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/gym/examples/scripts/list_envs" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="dqn_InvertedPendulum-v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RL_toolbox" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/dqn_CartPole-v0.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -485,19 +470,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.trpo_continous" />
-      <item index="1" class="java.lang.String" itemvalue="Python.trpo_parallel" />
-      <item index="2" class="java.lang.String" itemvalue="Python.test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.trpo_continous (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.trpo_parallel (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.dqn_mountaincar" />
+      <item index="1" class="java.lang.String" itemvalue="Python.dqn_mountaincar (1)" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.list_envs" />
+      <item index="4" class="java.lang.String" itemvalue="Python.dqn_InvertedPendulum-v1" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test" />
-        <item index="1" class="java.lang.String" itemvalue="Python.trpo_parallel (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.trpo_continous (1)" />
-        <item index="3" class="java.lang.String" itemvalue="Python.trpo_parallel" />
-        <item index="4" class="java.lang.String" itemvalue="Python.trpo_continous" />
+        <item index="0" class="java.lang.String" itemvalue="Python.dqn_InvertedPendulum-v1" />
+        <item index="1" class="java.lang.String" itemvalue="Python.list_envs" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dqn_mountaincar (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.main" />
+        <item index="4" class="java.lang.String" itemvalue="Python.dqn_mountaincar" />
       </list>
     </recent_temporary>
   </component>
@@ -518,27 +503,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="213" y="169" width="1845" height="1028" extended-state="0" />
-    <editor active="false" />
+    <frame x="45" y="-6" width="1875" height="1086" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17214912" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16576675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3969957" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41845495" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40354767" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5249406" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -585,109 +570,27 @@
           <line>40</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/experiment/dqn_mountaincar.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/RLToolbox/agent/DQN_agent.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/RLToolbox/storage/storage_replay.py</url>
+          <line>67</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/test/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_parallel_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#48#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/environment/gym_environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#143#161#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <element signature="e#142#263#0" expanded="false" />
-            <element signature="e#304#1897#0" expanded="false" />
-            <element signature="e#1932#1995#0" expanded="false" />
-            <element signature="e#2041#3796#0" expanded="false" />
-            <element signature="e#3847#4212#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous_parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/algorithm/TRPO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" selection-start-line="0" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_continous.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_parallel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -700,7 +603,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -779,13 +684,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="72" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#199#527#0" expanded="false" />
+            <element signature="e#558#896#0" expanded="false" />
+            <element signature="e#920#1083#0" expanded="false" />
+            <element signature="e#1381#2139#0" expanded="false" />
+            <element signature="e#2178#2360#0" expanded="false" />
+            <element signature="e#2397#2700#0" expanded="false" />
+            <element signature="e#2769#3410#0" expanded="false" />
+            <element signature="e#3488#3707#0" expanded="false" />
+            <element signature="e#3732#3826#0" expanded="false" />
+            <element signature="e#3866#3984#0" expanded="false" />
+            <element signature="e#4023#4190#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="210">
@@ -793,6 +709,9 @@
           </first_editor>
           <second_editor />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/detection-2016-nipsws/requirements.txt">
@@ -835,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,31 +764,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_continous.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/environment/gym_environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#143#161#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -878,13 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <element signature="e#142#263#0" expanded="false" />
-            <element signature="e#304#1897#0" expanded="false" />
-            <element signature="e#1932#1995#0" expanded="false" />
-            <element signature="e#2041#3796#0" expanded="false" />
-            <element signature="e#3847#4212#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -893,17 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/algorithm/TRPO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -912,7 +792,7 @@
         <state relative-caret-position="1500">
           <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
           <folding>
-            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#0#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,9 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#48#85#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -951,10 +828,150 @@
     </entry>
     <entry file="file://$USER_HOME$/test/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="136" column="15" selection-start-line="136" selection-start-column="15" selection-end-line="136" selection-end-column="15" />
+        <state relative-caret-position="345">
+          <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/dqn_mountaincar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python2.7/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="1455" column="0" selection-start-line="1455" selection-start-column="0" selection-end-line="1455" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tensorflow10/local/lib/python2.7/site-packages/tensorflow/python/platform/flags.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/algorithm/TRPO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1395">
+          <caret line="126" column="75" selection-start-line="124" selection-start-column="8" selection-end-line="126" selection-end-column="75" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="74" column="69" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/experiment/trpo_continous.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-634">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/toolbox/sample/e_greedy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/mountaincar/dqn/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-450">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/mountaincar_image/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/dqn-tensorflow/dqn/agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="253" column="11" selection-start-line="253" selection-start-column="11" selection-end-line="253" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/mountaincar_image/dqn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/dqn_mountaincar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="64" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="81" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/mountaincar_image/parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_replay.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+          <folding>
+            <element signature="e#14#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/DQN_agent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-325">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/dqn_CartPole-v0.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="74" column="21" selection-start-line="74" selection-start-column="21" selection-end-line="74" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>

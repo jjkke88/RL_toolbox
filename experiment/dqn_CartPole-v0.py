@@ -14,18 +14,18 @@ class DQNNet(object):
         self.target_value = tf.placeholder(dtype=tf.float32, shape=[None], name='%s_target_value'%scope)
         with tf.variable_scope("%s_q" % scope):
             network = tl.layers.InputLayer(self.obs, name='%s_q_input_layer' % scope)
-            network = tl.layers.DenseLayer(network, n_units=64,
+            network = tl.layers.DenseLayer(network, n_units=32,
                                            act=tf.nn.relu, name="%s_q_fc1" % scope)
-            network = tl.layers.DenseLayer(network, n_units=64,
+            network = tl.layers.DenseLayer(network, n_units=32,
                                            act=tf.nn.relu, name="%s_q_fc2" % scope)
-            network = tl.layers.DenseLayer(network, n_units=pms.action_shape,
-                                           act=tf.nn.relu, name="%s_q_q" % scope)
+            network = tl.layers.DenseLayer(network, n_units=pms.action_shape, name="%s_q_q" % scope)
 
             self.q = network.outputs
-            self.action_n = tf.argmax(self.q, 1)
+            self.action_n = tf.argmax(self.q , dimension=1)
+
             self.q_n = tf.reduce_sum(self.q * self.action_acted, reduction_indices=1, name='q_acted')
             self.delta = self.target_value - self.q_n
-            self.loss = tf.reduce_mean(0.5 * tf.square(self.delta), name='loss')
+            self.loss = tf.reduce_mean(tf.square(self.delta), name='%s_loss'%scope)
             self.learning_rate_step = tf.placeholder(dtype='int64', shape=None, name='%s_learning_rate_step'%scope)
             self.learning_rate_op = tf.maximum(pms.learning_rate_minimum,
                                                tf.train.exponential_decay(
@@ -39,20 +39,19 @@ class DQNNet(object):
 
         with tf.variable_scope("%s_target" % scope):
             target_network = tl.layers.InputLayer(self.obs, name='%s_target_input_layer' % scope)
-            target_network = tl.layers.DenseLayer(target_network, n_units=64,
+            target_network = tl.layers.DenseLayer(target_network, n_units=32,
                                            act=tf.nn.relu, name="%s_target_fc1" % scope)
-            target_network = tl.layers.DenseLayer(target_network, n_units=64,
+            target_network = tl.layers.DenseLayer(target_network, n_units=32,
                                            act=tf.nn.relu, name="%s_target_fc2" % scope)
-            target_network = tl.layers.DenseLayer(target_network, n_units=pms.action_shape,
-                                           act=tf.nn.relu, name="%s_target_q" % scope)
+            target_network = tl.layers.DenseLayer(target_network, n_units=pms.action_shape, name="%s_target_q" % scope)
             self.target_q = target_network.outputs
+
 
         self.var_list = [v for v in tf.trainable_variables() if v.name.startswith("%s_q" % scope)]
         self.var_list_target = [v for v in tf.trainable_variables() if v.name.startswith("%s_target" % scope)]
         self.gf = GetFlat(self.var_list)
+        self.gf_target = GetFlat(self.var_list_target)
         self.sff = SetFromFlat(self.var_list_target)
-
-
 
     def update_target_net(self):
         self.sff(self.gf())
@@ -63,9 +62,16 @@ if __name__ == "__main__":
     if not os.path.isdir("./log"):
         os.makedirs("./log")
     pms = PMS_dqn().pms
+    # pms.train_flag = False
+    # pms.render = True
     env = Environment(gym.make(pms.environment_name), pms=pms)
-    session = tf.Session()
+    print env.observation_space, env.action_space
+    gpu_options = tf.GPUOptions(
+        per_process_gpu_memory_fraction=1.0/3.0)
+    session = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
     net = DQNNet("dqn", pms)
+    # pms.train_flag = False
+    # pms.render = True
     agent = DQNAgent(env, session, None, None, None, net, pms)
     storage = StorageReplay(agent, env, None, pms)
     agent.storage = storage

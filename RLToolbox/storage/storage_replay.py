@@ -5,15 +5,15 @@ import random
 class StorageReplay(object):
     def __init__(self, agent, env, baseline, pms):
         self.size = 0
-        self.max_size = int(pms.max_size)
+        self.max_size = int(pms.buffer_size)
         self.isFull = False
         self.pms = pms
         self.env = env
         self.agent = agent
-        self.state = np.zeros((pms.max_size, pms.obs_shape))
-        self.action = np.zeros((pms.max_size, pms.action_shape))
-        self.reward = np.zeros((pms.max_size, 1))
-        self.done = np.zeros((pms.max_size, 1))
+        self.state = np.zeros((pms.buffer_size, pms.obs_shape))
+        self.action = np.zeros((pms.buffer_size, pms.action_shape))
+        self.reward = np.zeros((pms.buffer_size, 1))
+        self.done = np.zeros((pms.buffer_size, 1))
         self.s_t_data = np.zeros([pms.batch_size, pms.obs_shape], dtype="float32")
         self.s_t_plus_1_data = np.zeros([pms.batch_size, pms.obs_shape], dtype="float32")
         self.action_data = np.zeros([pms.batch_size, pms.action_shape], dtype="float32")
@@ -61,6 +61,7 @@ class StorageReplay(object):
             o = next_o
             if self.pms.render:
                 self.env.render()
+        return episode_steps
 
     def saveTuple(self, state, action_num, reward, done):
         action = np.zeros(self.pms.action_shape)
