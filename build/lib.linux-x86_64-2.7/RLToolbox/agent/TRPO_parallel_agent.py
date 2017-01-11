@@ -20,6 +20,7 @@ class TRPOParallelAgent(multiprocessing.Process):
 
     def __init__(self, env, session, baseline, storage, distribution, net, pms, task_q , result_q):
         multiprocessing.Process.__init__(self)
+
         self.task_q = task_q
         self.result_q = result_q
         self.env = env
@@ -97,7 +98,9 @@ class TRPOParallelAgent(multiprocessing.Process):
 
     def run(self):
         self.init_network()
-        self.trpo = TRPO(self.env , self.session , self.baseline, self.storage, self.distribution , self.net, self.pms)
+        from RLToolbox.storage.storage_continous import Storage
+        storage = Storage(None, None, self.baseline, self.pms)
+        self.trpo = TRPO(self.env , self.session , self.baseline, storage, self.distribution , self.net, self.pms)
         self.trpo.saver = self.saver
         while True:
             paths = self.task_q.get()
@@ -117,7 +120,7 @@ class TRPOParallelAgent(multiprocessing.Process):
                     self.trpo.save_model(self.pms.environment_name + "-" + str(paths[3]))
                 self.task_q.task_done()
             else:
-                stats , theta, thprev = self.train_paths(paths, parallel=True, linear_search=False, storage=self.storage)
+                stats , theta, thprev = self.train_paths(paths, parallel=True, linear_search=False, storage=storage)
                 print theta.mean()
                 self.sff(theta)
                 self.task_q.task_done()
@@ -132,58 +135,54 @@ class TRPOParallelAgent(multiprocessing.Process):
         :param linear_search: whether linear search
         :return: stats , theta , thprev (status, new theta, old theta)
         """
-        sample_data_source = storage.process_paths(paths)
-        agent_infos_source = sample_data_source["agent_infos"]
-        obs_n_source = sample_data_source["observations"]
-        action_n_source = sample_data_source["actions"]
-        advant_n_source = sample_data_source["advantages"]
-        n_samples = len(obs_n_source)
-        fullstep_all = []
+        sample_data = storage.process_paths(paths)
+        agent_infos = sample_data["agent_infos"]
+        obs_n = sample_data["observations"]
+        action_n = sample_data["actions"]
+        advant_n = sample_data["advantages"]
+        n_samples = len(obs_n)
+        inds = np.random.choice(n_samples , int(math.floor(n_samples * self.pms.subsample_factor)) , replace=False)
+        # inds = range(n_samples)
+        obs_n = obs_n[inds]
+        action_n = action_n[inds]
+        advant_n = advant_n[inds]
+        action_dist_means_n = np.array([agent_info["mean"] for agent_info in agent_infos[inds]])
+        action_dist_logstds_n = np.array([agent_info["log_std"] for agent_info in agent_infos[inds]])
+        feed = {self.net.obs: obs_n ,
+                self.net.advant: advant_n ,
+                self.net.old_dist_means_n: action_dist_means_n ,
+                self.net.old_dist_logstds_n: action_dist_logstds_n ,
+                self.net.action_n: action_n
+                }
+
         episoderewards = np.array([path["rewards"].sum() for path in paths])
         thprev = self.gf()  # get theta_old
-        train_number = int(1.0/self.pms.subsample_factor)
-        print "train paths iterations:%d, batch size:%d"%(train_number, int(n_samples * self.pms.subsample_factor))
 
-        for iteration in xrange(train_number):
-            print "train mini batch%d"%iteration
-            inds = np.random.choice(n_samples , int(math.floor(n_samples * self.pms.subsample_factor)) , replace=False)
-            # inds = range(n_samples)
-            obs_n = obs_n_source[inds]
-            action_n = action_n_source[inds]
-            advant_n = advant_n_source[inds]
-            action_dist_means_n = np.array([agent_info["mean"] for agent_info in agent_infos_source[inds]])
-            action_dist_logstds_n = np.array([agent_info["log_std"] for agent_info in agent_infos_source[inds]])
-            feed = {self.net.obs: obs_n ,
-                    self.net.advant: advant_n ,
-                    self.net.old_dist_means_n: action_dist_means_n ,
-                    self.net.old_dist_logstds_n: action_dist_logstds_n ,
-                    self.net.action_n: action_n
-                    }
+        def fisher_vector_product(p):
+            feed[self.flat_tangent] = p
+            return self.session.run(self.fvp , feed) + self.pms.cg_damping * p
 
-            def fisher_vector_product(p):
-                feed[self.flat_tangent] = p
-                return self.session.run(self.fvp , feed) + self.pms.cg_damping * p
+        g = self.session.run(self.pg , feed_dict=feed)
+        stepdir = krylov.cg(fisher_vector_product , -g , cg_iters=self.pms.cg_iters)
+        shs = 0.5 * stepdir.dot(fisher_vector_product(stepdir))  # theta
+        # if shs<0, then the nan error would appear
+        lm = np.sqrt(shs / self.pms.max_kl)
+        fullstep = stepdir / lm
+        neggdotstepdir = -g.dot(stepdir)
 
-            g = self.session.run(self.pg , feed_dict=feed)
-            stepdir = krylov.cg(fisher_vector_product , -g , cg_iters=self.pms.cg_iters)
-            shs = 0.5 * stepdir.dot(fisher_vector_product(stepdir))  # theta
-            # if shs<0, then the nan error would appear
-            lm = np.sqrt(shs / self.pms.max_kl)
-            fullstep = stepdir / lm
-            neggdotstepdir = -g.dot(stepdir)
+        def loss(th):
+            self.sff(th)
+            return self.session.run(self.losses , feed_dict=feed)
 
-            def loss(th):
-                self.sff(th)
-                return self.session.run(self.losses , feed_dict=feed)
-
-            if linear_search:
-                theta_t = linesearch(loss , thprev , fullstep , neggdotstepdir / lm , max_kl=self.pms.max_kl)
-            else:
-                theta_t = thprev + fullstep
-            fullstep_all.append(theta_t - thprev)
-        theta = thprev + np.array(fullstep_all).mean(axis=0)
+        if linear_search:
+            theta = linesearch(loss , thprev , fullstep , neggdotstepdir / lm , max_kl=self.pms.max_kl)
+        else:
+            theta = thprev + fullstep
+            if math.isnan(theta.mean()):
+                print shs is None
+                theta = thprev
         stats = {}
-        stats["sum steps of episodes"] = sample_data_source["sum_episode_steps"]
+        stats["sum steps of episodes"] = sample_data["sum_episode_steps"]
         stats["Average sum of rewards per episode"] = episoderewards.mean()
         return stats , theta , thprev
 

@@ -51,10 +51,7 @@ class Environment(Env):
         return self.observation
 
     def render(self, mode="human", close=False):
-        if mode == "human":
-            return self.env.render(mode)
-        elif mode == "rgb_array":
-            return cv2.resize(self.env.render('rgb_array'), (self.pms.obs_shape[1], self.pms.obs_shape[0]))
+        return self.env.render(mode)
 
     @property
     def observation(self):

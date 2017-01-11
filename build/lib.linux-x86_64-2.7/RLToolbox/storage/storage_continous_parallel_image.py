@@ -1,12 +1,9 @@
-import numpy as np
-import tensorflow as tf
 import multiprocessing
 from RLToolbox.toolbox.common.utils import *
 import gym
 import time
-import copy
 from random import randint
-import math
+import cv2
 
 
 class Actor(multiprocessing.Process):
@@ -21,7 +18,6 @@ class Actor(multiprocessing.Process):
         self.net_class = net_class
         # pms.max_path_length = gym.spec(args.environment_name).timestep_limit
 
-
     def get_action(self, obs):
         if self.net == None:
             raise NameError("network have not been defined")
@@ -35,11 +31,10 @@ class Actor(multiprocessing.Process):
         else:
             action = action_dist_means_n[0]
         # action = np.clip(action, pms.min_a, pms.max_a)
-        return action , dict(mean=action_dist_means_n[0] , log_std=np.exp(action_dist_logstds_n[0]))
+        return action, dict(mean=action_dist_means_n[0] , log_std=np.exp(action_dist_logstds_n[0]))
 
     def run(self):
-        from RLToolbox.environment.gym_environment import Environment
-        self.env = Environment(gym.make(self.args.environment_name), pms=self.args)
+        self.env = gym.make(self.args.environment_name)
         self.env.seed(randint(0, 999999))
         if self.monitor:
             self.env.monitor.start('monitor/', force=True)
@@ -98,14 +93,13 @@ class Actor(multiprocessing.Process):
         if self.pms.render:
             self.env.render()
         o = self.env.reset()
-        if self.pms.obs_as_image:
-            o = self.env.render('rgb_array')
+
         episode_steps = 0
         for i in xrange(self.pms.max_path_length - 1):
+            o = self.env.render('rgb_array')
+            o = self.deal_image(o)
             a, agent_info = self.get_action(o)
             next_o, reward, terminal, env_info = self.env.step(a)
-            if self.pms.obs_as_image:
-                next_o = self.env.render('rgb_array')
             observations.append(o)
             rewards.append(np.array([reward]))
             actions.append(a)
@@ -127,16 +121,32 @@ class Actor(multiprocessing.Process):
         )
         return path
 
-class ParallelStorage():
-    def __init__(self, agent, env, baseline, pms, net_class):
+    def deal_image(self , image):
+        # index = len(self.obs_origin)
+        # image_end = []
+        # if index < pms.history_number:
+        #     image_end = self.obs_origin[0:index]
+        #     for i in range(pms.history_number - index):
+        #         image_end.append(image)
+        # else:
+        #     image_end = self.obs_origin[index - pms.history_number:index]
+        #
+        # image_end = np.concatenate(image_end)
+        # # image_end = image_end.reshape((pms.obs_height, pms.obs_width, pms.history_number))
+        # obs = cv2.resize(cv2.cvtColor(image_end , cv2.COLOR_RGB2GRAY) / 255. , (pms.obs_height , pms.obs_width))
+        obs = cv2.resize(image, (self.pms.obs_height, self.pms.obs_width))
+        # obs = np.transpose(np.array(obs), (2, 0, 1))
+        return obs
+
+class ParallelStorageImage():
+    def __init__(self, pms, net_class):
         self.args = pms
-        self.baseline = baseline
         self.tasks = multiprocessing.JoinableQueue()
         self.results = multiprocessing.Queue()
         self.actors = []
-        self.actors.append(Actor(self.args, self.tasks, self.results, 9999, self.args.record_movie, pms=pms, net_class=net_class))
+        self.actors.append(Actor(self.args, self.tasks, self.results, 9999, self.args.record_movie, pms, net_class))
         for i in xrange(self.args.jobs-1):
-            self.actors.append(Actor(self.args, self.tasks, self.results, 37*(i+3), False, pms=pms, net_class=net_class))
+            self.actors.append(Actor(self.args, self.tasks, self.results, 37*(i+3), False, pms, net_class))
         for a in self.actors:
             a.start()
         # we will start by running 20,000 / 1000 = 20 episodes for the first ieration
@@ -157,35 +167,6 @@ class ParallelStorage():
             num_rollouts -= 1
             paths.append(self.results.get())
         return paths
-
-    def process_paths(self, paths):
-        sum_episode_steps = 0
-        for path in paths:
-            sum_episode_steps += path['episode_steps']
-            path['baselines'] = self.baseline.predict(path)
-            path["returns"] = np.concatenate(discount(path["rewards"] , self.args.discount))
-            path["advantages"] = path['returns'] - path['baselines']
-        observations = np.concatenate([path["observations"] for path in paths])
-        actions = np.concatenate([path["actions"] for path in paths])
-        rewards = np.concatenate([path["rewards"] for path in paths])
-        advantages = np.concatenate([path["advantages"] for path in paths])
-        env_infos = np.concatenate([path["env_infos"] for path in paths])
-        agent_infos = np.concatenate([path["agent_infos"] for path in paths])
-        if self.args.center_adv:
-            advantages -= np.mean(advantages)
-            advantages /= (advantages.std() + 1e-8)
-        samples_data = dict(
-            observations=observations,
-            actions=actions ,
-            rewards=rewards ,
-            advantages=advantages ,
-            env_infos=env_infos ,
-            agent_infos=agent_infos ,
-            paths=paths ,
-            sum_episode_steps=sum_episode_steps
-        )
-        self.baseline.fit(paths)
-        return samples_data
 
     def set_policy_weights(self, parameters):
         for i in xrange(self.args.jobs):

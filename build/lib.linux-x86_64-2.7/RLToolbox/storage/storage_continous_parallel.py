@@ -38,8 +38,7 @@ class Actor(multiprocessing.Process):
         return action , dict(mean=action_dist_means_n[0] , log_std=np.exp(action_dist_logstds_n[0]))
 
     def run(self):
-        from RLToolbox.environment.gym_environment import Environment
-        self.env = Environment(gym.make(self.args.environment_name), pms=self.args)
+        self.env = gym.make(self.args.environment_name)
         self.env.seed(randint(0, 999999))
         if self.monitor:
             self.env.monitor.start('monitor/', force=True)
@@ -98,14 +97,10 @@ class Actor(multiprocessing.Process):
         if self.pms.render:
             self.env.render()
         o = self.env.reset()
-        if self.pms.obs_as_image:
-            o = self.env.render('rgb_array')
         episode_steps = 0
         for i in xrange(self.pms.max_path_length - 1):
             a, agent_info = self.get_action(o)
             next_o, reward, terminal, env_info = self.env.step(a)
-            if self.pms.obs_as_image:
-                next_o = self.env.render('rgb_array')
             observations.append(o)
             rewards.append(np.array([reward]))
             actions.append(a)
@@ -128,9 +123,8 @@ class Actor(multiprocessing.Process):
         return path
 
 class ParallelStorage():
-    def __init__(self, agent, env, baseline, pms, net_class):
+    def __init__(self, pms, net_class):
         self.args = pms
-        self.baseline = baseline
         self.tasks = multiprocessing.JoinableQueue()
         self.results = multiprocessing.Queue()
         self.actors = []
@@ -158,34 +152,6 @@ class ParallelStorage():
             paths.append(self.results.get())
         return paths
 
-    def process_paths(self, paths):
-        sum_episode_steps = 0
-        for path in paths:
-            sum_episode_steps += path['episode_steps']
-            path['baselines'] = self.baseline.predict(path)
-            path["returns"] = np.concatenate(discount(path["rewards"] , self.args.discount))
-            path["advantages"] = path['returns'] - path['baselines']
-        observations = np.concatenate([path["observations"] for path in paths])
-        actions = np.concatenate([path["actions"] for path in paths])
-        rewards = np.concatenate([path["rewards"] for path in paths])
-        advantages = np.concatenate([path["advantages"] for path in paths])
-        env_infos = np.concatenate([path["env_infos"] for path in paths])
-        agent_infos = np.concatenate([path["agent_infos"] for path in paths])
-        if self.args.center_adv:
-            advantages -= np.mean(advantages)
-            advantages /= (advantages.std() + 1e-8)
-        samples_data = dict(
-            observations=observations,
-            actions=actions ,
-            rewards=rewards ,
-            advantages=advantages ,
-            env_infos=env_infos ,
-            agent_infos=agent_infos ,
-            paths=paths ,
-            sum_episode_steps=sum_episode_steps
-        )
-        self.baseline.fit(paths)
-        return samples_data
 
     def set_policy_weights(self, parameters):
         for i in xrange(self.args.jobs):
