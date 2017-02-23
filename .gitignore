@@ -2,3 +2,5 @@ checkpoint/
 log/
 .idea/
 .pyc
+*.npz
+*.npy

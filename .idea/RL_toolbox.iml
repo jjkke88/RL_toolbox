@@ -4,9 +4,8 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 2.7.6 virtualenv at ~/tensorflow10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="mountaincar" />
-    <orderEntry type="module" module-name="dqn-tensorflow" />
     <orderEntry type="module" module-name="gym" />
+    <orderEntry type="module" module-name="DQN-tensorflow" />
   </component>
   <component name="TestRunnerService">
     <option name="projectConfiguration" value="Nosetests" />

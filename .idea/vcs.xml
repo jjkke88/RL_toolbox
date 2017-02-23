@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$USER_HOME$/PycharmProjects/DQN-tensorflow" vcs="Git" />
+    <mapping directory="$USER_HOME$/PycharmProjects/DQN-tensorflow" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/dqn-tensorflow" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/mountaincar" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/mountaincar_image" vcs="Git" />
     <mapping directory="$USER_HOME$/PycharmProjects/trpo-wyp" vcs="Git" />
     <mapping directory="$USER_HOME$/detection-2016-nipsws" vcs="Git" />
+    <mapping directory="$USER_HOME$/gym" vcs="Git" />
     <mapping directory="$USER_HOME$/gym" vcs="Git" />
     <mapping directory="$USER_HOME$/pybox2d" vcs="Git" />
   </component>

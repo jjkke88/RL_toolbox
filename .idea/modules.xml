@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/DQN-tensorflow.iml" filepath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/DQN-tensorflow.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RL_toolbox.iml" filepath="$PROJECT_DIR$/.idea/RL_toolbox.iml" />
-      <module fileurl="file://$USER_HOME$/PycharmProjects/dqn-tensorflow/.idea/dqn-tensorflow.iml" filepath="$USER_HOME$/PycharmProjects/dqn-tensorflow/.idea/dqn-tensorflow.iml" />
       <module fileurl="file://$USER_HOME$/gym/.idea/gym.iml" filepath="$USER_HOME$/gym/.idea/gym.iml" />
-      <module fileurl="file://$USER_HOME$/PycharmProjects/mountaincar_image/.idea/mountaincar.iml" filepath="$USER_HOME$/PycharmProjects/mountaincar_image/.idea/mountaincar.iml" />
     </modules>
   </component>
 </project>

@@ -378,7 +378,7 @@ if __name__ == "__main__":
             rollouts.set_policy_weights(theta)
     else:
         from agent.TRPO_agent import TRPOAgent
-        from environment.gym_environment import Environment
+        from RLTracking.environment import Environment
         from storage.storage_continous import Storage
         session = tf.Session()
         baseline = Baseline()

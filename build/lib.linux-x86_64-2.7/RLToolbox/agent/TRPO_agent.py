@@ -62,7 +62,7 @@ class TRPOAgent(TRPO):
             start += size
         self.gvp = [tf.reduce_sum(g * t) for (g , t) in zip(grads , tangents)]
         self.fvp = flatgrad(tf.reduce_sum(self.gvp) , var_list)  # get kl''*p
-        self.session.run(tf.initialize_all_variables())
+        self.session.run(tf.global_variables_initializer())
 
     def init_logger(self):
         head = ["rewards" , "std"]

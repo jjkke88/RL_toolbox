@@ -13,7 +13,7 @@ class PMS_base(object):
     flags.DEFINE_integer('batch_size', 100, 'batch size for trainning')
     flags.DEFINE_float('max_kl', 0.01, 'the largest kl distance, \sigma in paper')
     flags.DEFINE_float('gae_lambda', 1.0, 'fix number')
-    flags.DEFINE_float('subsample_factor', 0.5, 'ratio of the samples used in training process')
+    flags.DEFINE_float('subsample_factor', 0.1, 'ratio of the samples used in training process')
     flags.DEFINE_float('cg_damping', 0.001, 'conjugate gradient damping')
     flags.DEFINE_float('discount', 0.99, 'discount')
     flags.DEFINE_integer('cg_iters', 20, 'iteration number in conjugate gradient')

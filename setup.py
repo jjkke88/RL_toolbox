@@ -16,7 +16,7 @@ except ImportError:
 
 
 setup(name='RLToolbox' ,
-      version="2.0.4" ,
+      version="2.0.6" ,
       description='rl toolbox' ,
       long_description="RL toolbox",
       author='wuyupei' ,

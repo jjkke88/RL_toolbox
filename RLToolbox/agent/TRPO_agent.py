@@ -26,6 +26,8 @@ class TRPOAgent(TRPO):
         """
         if self.pms.min_std is not None:
             log_std_var = tf.maximum(self.net.action_dist_logstds_n , np.log(self.pms.min_std))
+        if self.pms.max_std is not None:
+            log_std_var = tf.minimum(self.net.action_dist_logstds_n , np.log(self.pms.max_std))
         self.action_dist_stds_n = tf.exp(log_std_var)
         self.old_dist_info_vars = dict(mean=self.net.old_dist_means_n , log_std=self.net.old_dist_logstds_n)
         self.new_dist_info_vars = dict(mean=self.net.action_dist_means_n , log_std=self.net.action_dist_logstds_n)
@@ -62,13 +64,15 @@ class TRPOAgent(TRPO):
             start += size
         self.gvp = [tf.reduce_sum(g * t) for (g , t) in zip(grads , tangents)]
         self.fvp = flatgrad(tf.reduce_sum(self.gvp) , var_list)  # get kl''*p
-        self.session.run(tf.initialize_all_variables())
+        self.session.run(tf.global_variables_initializer())
+        self.net.asyc_parameters(session=self.session)
 
     def init_logger(self):
         head = ["rewards" , "std"]
         self.logger = Logger(head)
 
     def learn(self):
+        #self.load_model(None)
         self.init_logger()
         iter_num = 0
         while True:

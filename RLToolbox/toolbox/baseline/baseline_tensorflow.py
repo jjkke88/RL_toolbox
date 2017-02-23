@@ -11,7 +11,7 @@ class Baseline(object):
 
     def create_net(self , shape):
         print(shape)
-        self.x = tf.placeholder(tf.float32 , shape=[None , shape] , name="x")
+        self.x = tf.placeholder(tf.float32 , shape=[None, shape] , name="x")
         self.y = tf.placeholder(tf.float32 , shape=[None] , name="y")
         self.net = (pt.wrap(self.x).
                     fully_connected(64 , activation_fn=tf.nn.tanh).
@@ -31,7 +31,7 @@ class Baseline(object):
     def fit(self, paths):
         featmat = np.concatenate([self._features(path) for path in paths])
         if self.net is None:
-            self.create_net(featmat.shape[1])
+            self.create_net(featmat.shape)
         returns = np.concatenate([path["returns"] for path in paths])
         for _ in range(10):
             loss, _ = self.session.run([self.l2, self.train], {self.x: featmat , self.y: returns})

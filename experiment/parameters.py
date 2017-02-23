@@ -4,12 +4,12 @@ class PMS_base(object):
     history_number = 2  # image history number
     jobs = 4  # thread or process number
     max_iter_number = 400  # 'control the max iteration number for trainning')
-    paths_number = 4  # 'number of paths in each rollout')
+    paths_number = 1  # 'number of paths in each rollout')
     max_path_length = 200  # 'timesteps in each path')
     batch_size = 100  # 'batch size for trainning')
     max_kl = 0.01  # 'the largest kl distance  # \sigma in paper')
     gae_lambda = 1.0  # 'fix number')
-    subsample_factor = 0.05  # 'ratio of the samples used in training process')
+    subsample_factor = 0.5  # 'ratio of the samples used in training process')
     cg_damping = 0.001  # 'conjugate gradient damping')
     discount = 0.99  # 'discount')
     cg_iters = 20  # 'iteration number in conjugate gradient')

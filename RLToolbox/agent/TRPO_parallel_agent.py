@@ -46,8 +46,10 @@ class TRPOParallelAgent(multiprocessing.Process):
         var_list
         """
         config = tf.ConfigProto(
-            device_count={'GPU': 0}
+            device_count={'GPU': 0},
         )
+        config.gpu_options.per_process_gpu_memory_fraction = self.pms.GPU_fraction
+
         self.session = tf.Session(config=config)
         if self.pms.min_std is not None:
             log_std_var = tf.maximum(self.net.action_dist_logstds_n, np.log(self.pms.min_std))
@@ -88,8 +90,9 @@ class TRPOParallelAgent(multiprocessing.Process):
             start += size
         self.gvp = [tf.reduce_sum(g * t) for (g, t) in zip(grads, tangents)]
         self.fvp = flatgrad(tf.reduce_sum(self.gvp), var_list)  # get kl''*p
-        self.session.run(tf.initialize_all_variables())
+        self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver(max_to_keep=5)
+        self.net.asyc_parameters(session=self.session)
 
     def init_logger(self):
         head = ["factor", "rewards", "std"]
@@ -115,10 +118,10 @@ class TRPOParallelAgent(multiprocessing.Process):
                 if paths[2] == 1:
                     print "saving checkpoint..."
                     self.trpo.save_model(self.pms.environment_name + "-" + str(paths[3]))
+                    self.trpo.save_summary()
                 self.task_q.task_done()
             else:
                 stats , theta, thprev = self.train_paths(paths, parallel=True, linear_search=False, storage=self.storage)
-                print theta.mean()
                 self.sff(theta)
                 self.task_q.task_done()
                 self.result_q.put((stats, theta, thprev))

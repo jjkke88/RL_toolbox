@@ -12,3 +12,8 @@
 ** get_paths
 ** process_paths
 * A new storage should have `agent, env, baseline, pms`
+
+# network
+
+*  def __init__(self, scope):scope:variable_scope
+*  def asyc_parameters(self):for network to initialize parameters from trained modelfile

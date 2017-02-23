@@ -32,11 +32,15 @@ class Storage(object):
         if self.pms.render:
             self.env.render()
         o = self.env.reset()
+        if self.pms.obs_as_image:
+            o = self.env.render('rgb_array')
         episode_steps = 0
         while episode_steps< self.pms.max_path_length:
             a, agent_info = self.agent.get_action(o)
             if math.isnan(a) is not True:
                 next_o, reward, terminal, env_info = self.env.step(a)
+                if self.pms.obs_as_image:
+                    next_o = self.env.render('rgb_array')
                 observations.append(o)
                 rewards.append(np.array([reward]))
                 actions.append(a)

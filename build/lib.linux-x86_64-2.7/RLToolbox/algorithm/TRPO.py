@@ -9,10 +9,6 @@ Base class for TRPOAgent
 class TRPO(object):
     def __init__(self, env, session, baseline, storage, distribution, net, pms):
         self.env = env
-        print("Observation Space", env.observation_space)
-        print("Action Space", env.action_space)
-        print("Action area, high:%f, low%f" % (env.action_space.high, env.action_space.low))
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.1 / 3.0)
         self.session = session
         self.baseline = baseline
         self.storage = storage
@@ -151,3 +147,6 @@ class TRPO(object):
                 self.saver.restore(self.session, tf.train.latest_checkpoint(self.pms.checkpoint_dir))
         except:
             print "load model %s fail" % (model_name)
+
+    def save_summary(self):
+        writer = tf.train.SummaryWriter('logs/', self.session.graph)

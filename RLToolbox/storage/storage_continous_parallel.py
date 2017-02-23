@@ -10,7 +10,7 @@ import math
 
 
 class Actor(multiprocessing.Process):
-    def __init__(self, args, task_q, result_q, actor_id, monitor, pms, net_class):
+    def __init__(self, args, task_q, result_q, actor_id, monitor, pms, net_class, env_class):
         multiprocessing.Process.__init__(self)
         self.actor_id = actor_id
         self.task_q = task_q
@@ -19,6 +19,7 @@ class Actor(multiprocessing.Process):
         self.monitor = monitor
         self.pms = pms
         self.net_class = net_class
+        self.env_class = env_class
         # pms.max_path_length = gym.spec(args.environment_name).timestep_limit
 
 
@@ -38,19 +39,18 @@ class Actor(multiprocessing.Process):
         return action , dict(mean=action_dist_means_n[0] , log_std=np.exp(action_dist_logstds_n[0]))
 
     def run(self):
-        from RLToolbox.environment.gym_environment import Environment
-        self.env = Environment(gym.make(self.args.environment_name), pms=self.args)
+        self.env = self.env_class(gym.make(self.args.environment_name), pms=self.args, scope=str(self.actor_id))
         self.env.seed(randint(0, 999999))
         if self.monitor:
             self.env.monitor.start('monitor/', force=True)
 
-        self.net = self.net_class("rollout_network" + str(self.actor_id))
+        self.net = self.net_class("rollout_network" + str(self.actor_id), pms=self.args)
         config = tf.ConfigProto(
             device_count={'GPU': 0}
         )
         self.session = tf.Session(config=config)
         var_list = self.net.var_list
-        self.session.run(tf.initialize_all_variables())
+        self.session.run(tf.global_variables_initializer())
         self.set_policy = SetFromFlat(var_list)
         self.set_policy.session = self.session
         while True:
@@ -128,15 +128,15 @@ class Actor(multiprocessing.Process):
         return path
 
 class ParallelStorage():
-    def __init__(self, agent, env, baseline, pms, net_class):
+    def __init__(self, agent, env, baseline, pms, net_class, env_class):
         self.args = pms
         self.baseline = baseline
         self.tasks = multiprocessing.JoinableQueue()
         self.results = multiprocessing.Queue()
         self.actors = []
-        self.actors.append(Actor(self.args, self.tasks, self.results, 9999, self.args.record_movie, pms=pms, net_class=net_class))
+        self.actors.append(Actor(self.args, self.tasks, self.results, 9999, self.args.record_movie, pms=pms, net_class=net_class, env_class=env_class))
         for i in xrange(self.args.jobs-1):
-            self.actors.append(Actor(self.args, self.tasks, self.results, 37*(i+3), False, pms=pms, net_class=net_class))
+            self.actors.append(Actor(self.args, self.tasks, self.results, 37*(i+3), False, pms=pms, net_class=net_class, env_class=env_class))
         for a in self.actors:
             a.start()
         # we will start by running 20,000 / 1000 = 20 episodes for the first ieration
