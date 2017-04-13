@@ -44,26 +44,22 @@ class TrackingAgent(TRPOAgent):
 
     def test_gym_env(self, checkpoint_file):
         self.load_model(checkpoint_file)
-        image , template_position , tracking_position = self.env.reset()
-        for i in xrange(5):
-            template_image = image[template_position[1]:template_position[3] + template_position[1] ,
-                             template_position[0]:template_position[2] + template_position[0] , :]
-            tracking_image = image[tracking_position[1]:tracking_position[3] + tracking_position[1] ,
-                             tracking_position[0]:tracking_position[2] + tracking_position[0] , :]
-            template_image_resize = cv2.resize(template_image , (227 , 227))
-            temp_image_resize = cv2.resize(tracking_image , (227 , 227))
-            # image = np.concatenate([template_image_resize , temp_image_resize], axis=1)
-            template_image_resize_feature = self.env.getFeatureByAlexNet(template_image_resize)
-            tracking_image_resize_feature = self.env.getFeatureByAlexNet(temp_image_resize)
+        while True:
+            image , template_position , tracking_position = self.env.reset()
+            for i in xrange(5):
+                # template_image = image[template_position[1]:template_position[3] + template_position[1] ,
+                #                  template_position[0]:template_position[2] + template_position[0] , :]
+                # tracking_image = image[tracking_position[1]:tracking_position[3] + tracking_position[1] ,
+                #                  tracking_position[0]:tracking_position[2] + tracking_position[0] , :]
+                # image = np.concatenate([template_image_resize , temp_image_resize], axis=1)
+                # template_image_resize_feature = self.env.getFeatureByAlexNet(template_image)
+                # tracking_image_resize_feature = self.env.getFeatureByAlexNet(tracking_image)
 
-            action = self.get_action(np.concatenate(np.concatenate([template_image_resize_feature, tracking_image_resize_feature])))[0]
 
-            state, reward, done, _ = self.env.step(action)
-            print action, reward
-            image = state[0]
-            template_position = state[1]
-            tracking_position = state[2]
-            self.env.render("rgb_array")
+                action = self.get_action(self.env.render("rgb_array"))[0]
+
+                state, reward, done, _ = self.env.step(action)
+                print action, reward
 
     def IOU(self, Reframe , GTframe):
         x1 = Reframe[0];

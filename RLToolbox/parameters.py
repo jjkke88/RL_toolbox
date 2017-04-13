@@ -31,7 +31,8 @@ class PMS_base(object):
     flags.DEFINE_boolean('center_adv', True, 'whether center advantage, fixed')
     flags.DEFINE_boolean('positive_adv', False, 'whether positive advantage, fixed')
     flags.DEFINE_boolean('use_std_network', False, 'whether use network to train std, it is not supported, fixed')
-    flags.DEFINE_float('std', 1.1, 'if the std is set to constant, then this value will be used')
+    flags.DEFINE_float('std' , 1.1 , 'if the std is set to constant, then this value will be used')
+    flags.DEFINE_float('max_std' , 2.6 , 'max_std')
     flags.DEFINE_integer('obs_shape', 3, 'dimensions of observation')
     flags.DEFINE_integer('action_shape', 1, 'dimensions of action')
     flags.DEFINE_float('min_a', -2.0, 'the smallest action value')
@@ -39,6 +40,7 @@ class PMS_base(object):
     flags.DEFINE_string("decay_method", "adaptive", "decay_method:adaptive, linear, exponential") # adaptive, linear, exponential
     flags.DEFINE_integer("timestep_adapt", 600, "timestep to adapt kl")
     flags.DEFINE_float("kl_adapt", 0.0005, "kl adapt rate")
+    flags.DEFINE_bool("obs_as_image" , False , "input image or state")
     pms = flags.FLAGS
     pms.checkpoint_file = None
     pms.batch_size = int(pms.subsample_factor * pms.paths_number * pms.max_path_length)

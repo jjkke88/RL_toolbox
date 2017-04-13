@@ -22,8 +22,17 @@ class EnvironmentTracking(Environment):
         pp = cv2.resize(image, (227 , 227))
         pp = np.asarray(pp, dtype=np.float32)
         pp = pp.reshape((1, pp.shape[1], pp.shape[0], 3))
-
         return self.alexNetSess.run(self.fc7, feed_dict={self.my_input_data: pp})
+
+    def getFeatureListByAlexNet(self, image_list):
+        image_resize_list = []
+        for image in image_list:
+            pp = cv2.resize(image , (227 , 227))
+            pp = np.asarray(pp , dtype=np.float32)
+            pp = pp.reshape((pp.shape[1] , pp.shape[0] , 3))
+            image_resize_list.append(pp)
+
+        return self.alexNetSess.run(self.fc7 , feed_dict={self.my_input_data: image_resize_list})
 
     def step(self , action , **kwargs):
         self._observation , reward , done , info = self.env.step(action)
@@ -33,17 +42,11 @@ class EnvironmentTracking(Environment):
         if mode == "human":
             return self.env.render(mode)
         elif mode == "rgb_array":
-            tuple = self.env.render()
+            tuple = self.env.render() # from gym render
             source_image = tuple[0]
             template_position = tuple[1]
             tracking_position = tuple[2]
-            template_image = source_image[template_position[1]:template_position[3] + template_position[1] ,
-                             template_position[0]:template_position[2] + template_position[0] , :]
-            tracking_image = source_image[tracking_position[1]:tracking_position[3] + tracking_position[1] ,
-                             tracking_position[0]:tracking_position[2] + tracking_position[0] , :]
-            # image = np.concatenate([template_image_resize , temp_image_resize], axis=1)
-            template_image_resize_feature = self.getFeatureByAlexNet(template_image)
-            tracking_image_resize_feature = self.getFeatureByAlexNet(tracking_image)
+            ### for show the render result
             env_image_clone = source_image.copy()
             template_left_top = (template_position[0] , template_position[1])
             template_right_bottom = (template_position[0] + template_position[2] ,
@@ -51,8 +54,18 @@ class EnvironmentTracking(Environment):
             tracking_left_top = (tracking_position[0] , tracking_position[1])
             tracking_right_bottom = (tracking_position[0] + tracking_position[2] ,
                                      tracking_position[1] + tracking_position[3])
-            cv2.rectangle(env_image_clone , template_left_top , template_right_bottom , (255 , 0 , 0))
+            cv2.rectangle(env_image_clone , template_left_top , template_right_bottom , (0 , 255 , 0))
             cv2.rectangle(env_image_clone , tracking_left_top , tracking_right_bottom , (0 , 0 , 255))
-            # cv2.imshow("show test" , env_image_clone)
-            # cv2.waitKey()
-            return np.concatenate(np.concatenate([template_image_resize_feature, tracking_image_resize_feature]))
+            cv2.imshow("result" , env_image_clone)
+            cv2.waitKey()
+            template_image = source_image[template_position[1]:template_position[3] + template_position[1] ,
+                             template_position[0]:template_position[2] + template_position[0] , :]
+            tracking_image = source_image[tracking_position[1]:tracking_position[3] + tracking_position[1] ,
+                             tracking_position[0]:tracking_position[2] + tracking_position[0] , :]
+            # image = np.concatenate([template_image_resize , temp_image_resize], axis=1)
+            # template_image_resize_feature = self.getFeatureByAlexNet(template_image)
+            # tracking_image_resize_feature = self.getFeatureByAlexNet(tracking_image)
+            template_image_resize_feature , tracking_image_resize_feature = self.getFeatureListByAlexNet(
+                [template_image , tracking_image])
+
+            return np.concatenate([template_image_resize_feature, tracking_image_resize_feature])

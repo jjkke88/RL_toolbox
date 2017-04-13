@@ -1,11 +1,10 @@
 import os
-
 import gym
 import numpy as np
 import prettytensor as pt
 import tensorflow as tf
 import tensorlayer as tl
-from RLToolbox.agent.TRPO_agent import TRPOAgent
+from RLToolbox.agent.AC_agent import ACAgent
 from RLToolbox.environment.gym_environment import Environment
 from RLToolbox.storage.storage_continous import Storage
 from RLToolbox.toolbox.baseline.baseline_tensorflow import Baseline
@@ -79,7 +78,7 @@ if __name__ == "__main__":
     baseline = Baseline()
     storage = None
     distribution = DiagonalGaussian(pms.action_shape)
-    agent = TRPOAgent(env, session, baseline, storage, distribution, net, pms)
+    agent = ACAgent(env, session, baseline, storage, distribution, net, pms)
     agent.storage = Storage(agent , env , baseline, pms)
     if pms.train_flag:
         agent.learn()

@@ -1,15 +1,15 @@
-from RLToolbox.algorithm.TRPO import TRPO
+from RLToolbox.algorithm.ActorCritic import ActorCritic
 import tensorflow as tf
 import numpy as np
 from RLToolbox.toolbox.common.utils import *
 from RLToolbox.toolbox.logger.logger import Logger
 
-class TRPOAgent(TRPO):
+class ACAgent(ActorCritic):
     def __init__(self, env, session, baseline, storage, distribution, net, pms):
-        super(TRPOAgent, self).__init__(env, session, baseline, storage, distribution, net, pms)
+        super(ACAgent, self).__init__(env, session, baseline, storage, distribution, net, pms)
         self.pms = pms
         self.init_network()
-        self.saver = tf.train.Saver(max_to_keep=2)
+        self.saver = tf.train.Saver(max_to_keep=10)
 
     def init_network(self):
         """
@@ -34,13 +34,8 @@ class TRPOAgent(TRPO):
         self.likehood_action_dist = self.distribution.log_likelihood_sym(self.net.action_n , self.new_dist_info_vars)
         self.ratio_n = self.distribution.likelihood_ratio_sym(self.net.action_n , self.new_dist_info_vars ,
                                                               self.old_dist_info_vars)
-        surr = -tf.reduce_mean(self.ratio_n * self.net.advant)  # Surrogate loss
-        batch_size = tf.shape(self.net.obs)[0]
-        batch_size_float = tf.cast(batch_size , tf.float32)
-        kl = tf.reduce_mean(self.distribution.kl_sym(self.old_dist_info_vars , self.new_dist_info_vars))
-        ent = self.distribution.entropy(self.old_dist_info_vars)
-        # ent = tf.reduce_sum(-p_n * tf.log(p_n + eps)) / Nf
-        self.losses = [surr , kl , ent]
+        surr = - tf.reduce_mean(self.likehood_action_dist * self.net.advant)  # Surrogate loss
+        self.losses = [surr]
         var_list = self.net.var_list
         self.gf = GetFlat(var_list)  # get theta from var_list
         self.gf.session = self.session
@@ -49,10 +44,6 @@ class TRPOAgent(TRPO):
         # get g
         self.pg = flatgrad(surr , var_list)
         # get A
-        # KL divergence where first arg is fixed
-        # replace old->tf.stop_gradient from previous kl
-        kl_firstfixed = self.distribution.kl_sym_firstfixed(self.new_dist_info_vars) / batch_size_float
-        grads = tf.gradients(kl_firstfixed , var_list)
         self.flat_tangent = tf.placeholder(dtype , shape=[None])
         shapes = map(var_shape , var_list)
         start = 0
@@ -62,8 +53,6 @@ class TRPOAgent(TRPO):
             param = tf.reshape(self.flat_tangent[start:(start + size)] , shape)
             tangents.append(param)
             start += size
-        self.gvp = [tf.reduce_sum(g * t) for (g , t) in zip(grads , tangents)]
-        self.fvp = flatgrad(tf.reduce_sum(self.gvp) , var_list)  # get kl''*p
         self.session.run(tf.global_variables_initializer())
         self.net.asyc_parameters(session=self.session)
 

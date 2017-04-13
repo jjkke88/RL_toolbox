@@ -1,0 +1,80 @@
+OpenJDK 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+[   2668]  ERROR -    #com.intellij.lang.Language - Language with ID 'Markdown' is already registered: class com.vladsch.idea.multimarkdown.MarkdownLanguage 
+java.lang.Throwable
+	at com.intellij.openapi.diagnostic.Logger.error(Logger.java:127)
+	at com.intellij.lang.Language.<init>(Language.java:87)
+	at com.intellij.lang.Language.<init>(Language.java:72)
+	at org.intellij.plugins.markdown.lang.MarkdownLanguage.<init>(MarkdownLanguage.java:25)
+	at org.intellij.plugins.markdown.lang.MarkdownLanguage.<clinit>(MarkdownLanguage.java:22)
+	at org.intellij.plugins.markdown.lang.MarkdownFileType.<init>(MarkdownFileType.java:30)
+	at org.intellij.plugins.markdown.lang.MarkdownFileType.<clinit>(MarkdownFileType.java:27)
+	at org.intellij.plugins.markdown.lang.MarkdownFileTypeFactory.createFileTypes(MarkdownFileTypeFactory.java:25)
+	at com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl.initStandardFileTypes(FileTypeManagerImpl.java:310)
+	at com.intellij.openapi.fileTypes.impl.FileTypeManagerImpl.<init>(FileTypeManagerImpl.java:270)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.picocontainer.defaults.InstantiatingComponentAdapter.newInstance(InstantiatingComponentAdapter.java:193)
+	at org.picocontainer.defaults.ConstructorInjectionComponentAdapter$1.run(ConstructorInjectionComponentAdapter.java:220)
+	at org.picocontainer.defaults.ThreadLocalCyclicDependencyGuard.observe(ThreadLocalCyclicDependencyGuard.java:53)
+	at org.picocontainer.defaults.ConstructorInjectionComponentAdapter.getComponentInstance(ConstructorInjectionComponentAdapter.java:248)
+	at com.intellij.util.pico.ConstructorInjectionComponentAdapter.getComponentInstance(ConstructorInjectionComponentAdapter.java:59)
+	at com.intellij.openapi.components.impl.ComponentManagerImpl$ComponentConfigComponentAdapter.getComponentInstance(ComponentManagerImpl.java:499)
+	at com.intellij.openapi.components.impl.ComponentManagerImpl.createComponents(ComponentManagerImpl.java:123)
+	at com.intellij.openapi.application.impl.ApplicationImpl.access$801(ApplicationImpl.java:92)
+	at com.intellij.openapi.application.impl.ApplicationImpl$12.run(ApplicationImpl.java:500)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$2.run(CoreProgressManager.java:142)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:446)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:392)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:54)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:127)
+	at com.intellij.openapi.application.impl.ApplicationImpl.createComponents(ApplicationImpl.java:516)
+	at com.intellij.openapi.components.impl.ComponentManagerImpl.init(ComponentManagerImpl.java:107)
+	at com.intellij.openapi.application.impl.ApplicationImpl.load(ApplicationImpl.java:458)
+	at com.intellij.openapi.application.impl.ApplicationImpl.load(ApplicationImpl.java:450)
+	at com.intellij.idea.IdeaApplication.run(IdeaApplication.java:194)
+	at com.intellij.idea.MainImpl$1$1$1.run(MainImpl.java:52)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at com.intellij.ide.IdeEventQueue.dispatchEvent(IdeEventQueue.java:366)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+[   2670]  ERROR -    #com.intellij.lang.Language - PyCharm Community Edition 2016.1.4  Build #PC-145.1504.1 
+[   2670]  ERROR -    #com.intellij.lang.Language - JDK: 1.8.0_76-release 
+[   2670]  ERROR -    #com.intellij.lang.Language - VM: OpenJDK 64-Bit Server VM 
+[   2670]  ERROR -    #com.intellij.lang.Language - Vendor: JetBrains s.r.o 
+[   2670]  ERROR -    #com.intellij.lang.Language - OS: Linux 
+[  11469]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  11520]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  11656]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  11706]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  11834]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  11884]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  11998]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12050]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  12158]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12209]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  12348]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12399]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  12544]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12595]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  12732]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12783]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  12898]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  12948]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  13065]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  13116]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  13236]   WARN - api.vfs.impl.local.FileWatcher - The current <b>inotify</b>(7) watch limit is too low. <a href="https://confluence.jetbrains.com/display/IDEADEV/Inotify+Watches+Limit">More details.</a> 
+[  13288]   WARN - pl.local.NativeFileWatcherImpl - Watcher terminated with exit code 3 
+[  13288]   WARN - api.vfs.impl.local.FileWatcher - File watcher failed to start 

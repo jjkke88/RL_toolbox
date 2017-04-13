@@ -4,3 +4,7 @@ log/
 .pyc
 *.npz
 *.npy
+*.npy
+*.pyc
+*.jpg
+data/

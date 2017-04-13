@@ -6,7 +6,7 @@ from RLToolbox.toolbox.common.utils import *
 """
 Base class for TRPOAgent
 """
-class TRPO(object):
+class ActorCritic(object):
     def __init__(self, env, session, baseline, storage, distribution, net, pms):
         self.env = env
         self.session = session
@@ -79,11 +79,11 @@ class TRPO(object):
         advant_n_source = sample_data_source["advantages"]
         n_samples = len(obs_n_source)
         fullstep_all = []
+        loss_all = []
         episoderewards = np.array([path["rewards"].sum() for path in paths])
         thprev = self.gf()  # get theta_old
         train_number = int(1.0 / self.pms.subsample_factor)
         print "train paths iterations:%d, batch size:%d" % (train_number , int(n_samples * self.pms.subsample_factor))
-
         for iteration in xrange(train_number):
             print "train mini batch%d" % iteration
             inds = np.random.choice(n_samples , int(math.floor(n_samples * self.pms.subsample_factor)) , replace=False)
@@ -99,33 +99,18 @@ class TRPO(object):
                     self.net.old_dist_logstds_n: action_dist_logstds_n ,
                     self.net.action_n: action_n
                     }
-
-            def fisher_vector_product(p):
-                feed[self.flat_tangent] = p
-                return self.session.run(self.fvp , feed) + self.pms.cg_damping * p
-
             g = self.session.run(self.pg , feed_dict=feed)
-            stepdir = krylov.cg(fisher_vector_product , -g , cg_iters=self.pms.cg_iters)
-            shs = 0.5 * stepdir.dot(fisher_vector_product(stepdir))  # theta
-            # if shs<0, then the nan error would appear
-            lm = np.sqrt(shs / self.pms.max_kl)
-            fullstep = stepdir / lm
-            neggdotstepdir = -g.dot(stepdir)
-
             def loss(th):
                 self.sff(th)
                 return self.session.run(self.losses , feed_dict=feed)
-
-            if linear_search:
-                theta_t = linesearch(loss , thprev , fullstep , neggdotstepdir / lm , max_kl=self.pms.max_kl)
-            else:
-                theta_t = thprev + fullstep
-            fullstep_all.append(theta_t - thprev)
-        theta = thprev + np.array(fullstep_all).mean(axis=0)
+            theta_t = thprev - 0.01 * g
+            loss_all.append(loss(theta_t)[0])
+            fullstep_all.append(0.01 * g)
+        theta = thprev - np.array(fullstep_all).mean(axis=0)
         stats = {}
         stats["sum steps of episodes"] = sample_data_source["sum_episode_steps"]
         stats["Average sum of rewards per episode"] = episoderewards.mean()
-        stats["surrent loss"] = loss(theta)[0]
+        stats["surrent loss"] = np.array(loss_all).mean(axis=0)
         return stats , theta , thprev
 
     def learn(self):
