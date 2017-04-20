@@ -2,7 +2,10 @@
 
 class PMS_base(object):
     class_number = 26
-    train_classify_frequency = 10
+    train_classify_frequency = 9
+    test_frequency = 90
+    train_file = "/home/wyp/RL_toolbox/RL_classify/data/SUN360_panoramas_1024x512/train/train.txt"
+    test_file = "/home/wyp/RL_toolbox/RL_classify/data/SUN360_panoramas_1024x512/test/test.txt"
     history_number = 2  # image history number
     jobs = 4  # thread or process number
     max_iter_number = 4000  # 'control the max iteration number for trainning')

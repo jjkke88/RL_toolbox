@@ -6,11 +6,13 @@ from RLToolbox.toolbox.math import krylov
 from RLToolbox.toolbox.common.utils import *
 import math
 import tensorlayer as tl
+from RL_classify.single_step.environment import EnvironmentClassify
+from RL_classify.pano_sence_analysis.enviroment import Enviroment
+from RLToolbox.toolbox.math.statistics import *
 
 class ClassifyAgent(TRPOAgent):
     def __init__(self , env , session , baseline , storage , distribution , net , pms):
         super(ClassifyAgent , self).__init__(env , session , baseline , storage , distribution , net , pms)
-
 
     def train_paths(self , paths , parallel=False , linear_search=True):
         """
@@ -20,6 +22,7 @@ class ClassifyAgent(TRPOAgent):
         :param linear_search: whether linear search
         :return: stats , theta , thprev (status, new theta, old theta)
         """
+
         sample_data_source = self.storage.process_paths(paths)
         agent_infos_source = sample_data_source["agent_infos"]
         obs_n_source = sample_data_source["observations"]
@@ -57,12 +60,13 @@ class ClassifyAgent(TRPOAgent):
                 self.sff(th)
                 return self.session.run(self.losses , feed_dict=feed)
 
-            loss_all.append(loss(thprev)[0])
+
             g = self.session.run(self.pg , feed_dict=feed)
             stepdir = krylov.cg(fisher_vector_product , -g , cg_iters=self.pms.cg_iters)
             shs = 0.5 * stepdir.dot(fisher_vector_product(stepdir))  # theta
             # if shs<0, then the nan error would appear
             if shs >= 0:
+                loss_all.append(loss(thprev)[0])
                 lm = np.sqrt(shs / self.pms.max_kl)
                 fullstep = stepdir / lm
                 neggdotstepdir = -g.dot(stepdir)
@@ -77,29 +81,44 @@ class ClassifyAgent(TRPOAgent):
         stats["sum steps of episodes"] = sample_data_source["sum_episode_steps"]
         stats["Average sum of rewards per episode"] = episoderewards.mean()
         stats["surrent loss"] = np.mean(np.array(loss_all))
+
         return stats , theta , thprev
 
-    def test(self, model_name):
-        self.load_model(model_name)
+    def get_test_result(self, all_prop_container):
+        result = np.ones(all_prop_container[0].shape)
+        result = min_max_norm(result)
+        for prob_list in all_prop_container:
+            prob_list = np.array(prob_list)
+            result = min_max_norm(result * prob_list)
+        return np.argmax(result)
+
+    def test(self, model_name, load=False):
+        if load:
+            self.load_model(model_name)
         all_image_container = []
         all_label_container = []
-        for i in xrange(50):
-            current_image = self.env.reset()
-            current_label = self.env.current_label
+        test_env = Enviroment(self.pms.test_file)
+        classify_right_number = 0
+        for i in xrange(500):
+            all_prop_container = []
+            current_view , current_label = test_env.generate_new_scence()
             image_container = []
             label_container = []
             label_container.append(current_label)
-            image_container.append(current_image)
+            image_container.append(current_view)
+            all_prop = self.env.classify_path_image_for_test(current_view)
+            all_prop_container.append(all_prop)
             for j in xrange(self.pms.max_path_length):
-                o, info = self.get_action(current_image)
-                next_image, _, _, _ = self.env.step(o)
+                action, info = self.get_action(current_view)
+                next_image, _ = test_env.action(action)
                 image_container.append(next_image)
-            all_image_container.append(image_container)
-            all_label_container.append(label_container)
-        train_view_length = len(all_image_container)
-        t = np.concatenate(np.concatenate(all_image_container))
-        X_test = np.reshape(t , (train_view_length , 100 , 100 , 3)).astype(np.float32)
-        y_test = np.concatenate(all_label_container)
-        tl.utils.test(self.session , self.env.network, self.env.acc, X_test, y_test, self.env.x, self.env.y_, batch_size=None, cost=self.env.cost)
+                label_container.append(current_label)
+                all_prop = self.env.classify_path_image_for_test(next_image)
+                all_prop_container.append(all_prop)
+            result = self.get_test_result(all_prop_container)
+            if result == current_label:
+                classify_right_number += 1
+        print "acc:%d"%(classify_right_number)
+
 
 

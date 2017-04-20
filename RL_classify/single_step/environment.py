@@ -3,6 +3,7 @@ import tensorflow as tf
 import tensorlayer as tl
 import cv2
 import numpy as np
+from RLToolbox.toolbox.math.statistics import *
 
 class EnvironmentClassify():
     def __init__(self, env, pms, type="origin", session=None):
@@ -15,6 +16,7 @@ class EnvironmentClassify():
         self.train_data_view = []
         self.train_data_label = []
         self.session = session
+        self.env = Enviroment(pms.train_file)
         self.init_classify_network()
 
     def init_classify_network(self):
@@ -70,18 +72,25 @@ class EnvironmentClassify():
         # classify self.path_view_container
         X_train = [self.current_view]
         probabily = self.session.run(self.y_softmax_op, feed_dict={self.x:X_train})[0]
-        real_label_probabily = probabily[self.current_label]
-        return [real_label_probabily]
+        return probabily
+
+    def classify_path_image_for_test(self, image):
+        # classify self.path_view_container
+        X_train = [image]
+        prop = self.session.run(self.y_softmax_op , feed_dict={self.x: X_train})[0]
+        return prop
 
     def get_reward(self):
-        probabily = 1.0
-        for prob in self.path_probabily_container:
-            probabily = probabily * prob[0]
-        return -1.0 + probabily
+        result = np.ones(self.path_probabily_container[0].shape)
+        result = min_max_norm(result)
+        for prob_list in self.path_probabily_container:
+            prob_list = np.array(prob_list)
+            result = min_max_norm(result * prob_list)
+        return -1 + result[self.current_label]
 
-    def reset(self, **kwargs):
+    def reset(self, train_classify_net=True, **kwargs):
         # get initial view
-        self.env = Enviroment("/home/wyp/RL_toolbox/RL_classify/data/pano_dataset/train/train.txt")
+
         self.current_view, self.current_label = self.env.generate_new_scence()
         self.path_view_container = []
         self.path_label_container = []
@@ -90,16 +99,19 @@ class EnvironmentClassify():
         self.path_label_container.append(self.current_label)
         probabily = self.classify_path_image()
         self.path_probabily_container.append(probabily)
-        if self.episode % self.pms.train_classify_frequency == 0 and self.episode != 0:
-            print "start train classify net..."
+        if self.episode % self.pms.train_classify_frequency == 0 and self.episode != 0 and train_classify_net:
+            print "start train classify net..." + str((self.episode))
             self.train_classify()
         self.episode += 1
         return self.current_view
 
     def step(self, action):
         self.step_view, self.step_label = self.env.action(action)
+        self.current_view = self.step_view
         self.path_view_container.append(self.step_view)
         self.path_label_container.append(self.step_label)
+        probabily = self.classify_path_image()
+        self.path_probabily_container.append(probabily)
         reward = self.get_reward()
         self.train_data_view.append(self.path_view_container)
         self.train_data_label.append(self.path_label_container)
@@ -113,6 +125,8 @@ class EnvironmentClassify():
         self.session.run(self.train_op, feed_dict={self.x: X_train, self.y_:y_train})
         self.train_data_label = []
         self.train_data_view = []
+        if self.episode % self.pms.test_frequency == 0 and self.episode != 0:
+            self.agent.test(None, load=False)
 
 
     def render(self, mode="human"):

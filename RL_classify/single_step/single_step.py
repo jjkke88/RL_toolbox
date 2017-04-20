@@ -13,7 +13,7 @@ from parameters import PMS_base
 from RLToolbox.network.network import Network
 from RLToolbox.network.AlexNet import AlexNet
 from RLToolbox.network.Vgg16Net import NetworkTLVgg
-from environment import EnvironmentClassify
+from RL_classify.single_step.environment import EnvironmentClassify
 from RL_classify.single_step.agent_classify import ClassifyAgent
 import prettytensor as pt
 
@@ -81,7 +81,7 @@ if __name__ == "__main__":
                 array_ops.zeros(shape=array_ops.shape(op.inputs[1]) , dtype=op.inputs[1].dtype) ,
                 array_ops.ones(shape=array_ops.shape(op.inputs[2]) , dtype=op.inputs[2].dtype))
     pms = PMS_base()
-    config = tf.ConfigProto(log_device_placement=True)
+    config = tf.ConfigProto(log_device_placement=False)
     config.gpu_options.per_process_gpu_memory_fraction = pms.GPU_fraction
     session = tf.Session(config=config)
     env = EnvironmentClassify(gym.make(pms.environment_name), pms=pms, session=session)
@@ -94,13 +94,13 @@ if __name__ == "__main__":
     agent = ClassifyAgent(env, session, baseline, storage, distribution, net, pms)
     agent.storage = Storage(agent , env , baseline, pms)
     env.agent = agent
-    pms.train_flag = True
+    pms.train_flag = False
     if pms.train_flag:
         agent.learn()
     else:
         # agent.test_tracking(None, '/home/wyp/gym/gym/envs/object_tracker/datas/David3/img')
         # agent.test_gym_env(None)
-        agent.test(None)
+        agent.test(None, load=True)
     if 'session' in locals() and session is not None:
         print('Close interactive session')
         session.close()
