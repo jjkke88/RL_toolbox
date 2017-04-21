@@ -3,7 +3,7 @@
 class PMS_base(object):
     class_number = 26
     train_classify_frequency = 9
-    test_frequency = 90
+    test_frequency = 180
     train_file = "/home/wyp/RL_toolbox/RL_classify/data/SUN360_panoramas_1024x512/train/train.txt"
     test_file = "/home/wyp/RL_toolbox/RL_classify/data/SUN360_panoramas_1024x512/test/test.txt"
     history_number = 2  # image history number
@@ -35,7 +35,7 @@ class PMS_base(object):
     positive_adv = False  # 'whether positive advantage  # fixed')
     use_std_network = False  # 'whether use network to train std  # it is not supported  # fixed')
     std = 1.1  # 'if the std is set to constant  # then this value will be used')
-    obs_shape = [100, 100, 3]  # 'dimensions of observation')
+    obs_shape = [1000]  # 'dimensions of observation')
     action_shape = 1  # 'dimensions of action')
     min_a = -2.0  # 'the smallest action value')
     max_a = 2.0  # 'the largest action value')

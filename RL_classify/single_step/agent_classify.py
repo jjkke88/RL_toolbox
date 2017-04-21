@@ -92,28 +92,30 @@ class ClassifyAgent(TRPOAgent):
             result = min_max_norm(result * prob_list)
         return np.argmax(result)
 
-    def test(self, model_name, load=False):
+    def test(self, model_name, load=False, test_number=50):
         if load:
             self.load_model(model_name)
         all_image_container = []
         all_label_container = []
         test_env = Enviroment(self.pms.test_file)
         classify_right_number = 0
-        for i in xrange(500):
+        for i in xrange(test_number):
             all_prop_container = []
             current_view , current_label = test_env.generate_new_scence()
+            current_feature = self.env.feature_extract_net.get_feature([current_view])[0]
             image_container = []
             label_container = []
             label_container.append(current_label)
             image_container.append(current_view)
-            all_prop = self.env.classify_path_image_for_test(current_view)
+            all_prop = self.env.classify_path_image_for_test(current_feature)
             all_prop_container.append(all_prop)
             for j in xrange(self.pms.max_path_length):
-                action, info = self.get_action(current_view)
+                action, info = self.get_action(current_feature)
                 next_image, _ = test_env.action(action)
+                next_feature = self.env.feature_extract_net.get_feature([next_image])[0]
                 image_container.append(next_image)
                 label_container.append(current_label)
-                all_prop = self.env.classify_path_image_for_test(next_image)
+                all_prop = self.env.classify_path_image_for_test(next_feature)
                 all_prop_container.append(all_prop)
             result = self.get_test_result(all_prop_container)
             if result == current_label:
