@@ -61,14 +61,16 @@ class EnvironmentClassify():
     def classify_path_image(self):
         # classify self.path_view_container
         X_train = [self.current_feature]
-        probabily = self.session.run(self.y_softmax_op, feed_dict={self.x:X_train})[0]
-        return probabily
+        self.current_softmax_result = self.session.run(self.y_softmax_op , feed_dict={self.x: X_train})
+        prob = self.current_softmax_result[0]
+        return prob
 
     def classify_path_image_for_test(self, feature):
         # classify self.path_view_container
         X_train = [feature]
-        prop = self.session.run(self.y_softmax_op , feed_dict={self.x: X_train})[0]
-        return prop
+        self.current_softmax_result = self.session.run(self.y_softmax_op , feed_dict={self.x: X_train})
+        prob = self.current_softmax_result[0]
+        return prob
 
     def get_reward(self):
         result = np.ones(self.path_probabily_container[0].shape)
@@ -76,7 +78,7 @@ class EnvironmentClassify():
         for prob_list in self.path_probabily_container:
             prob_list = np.array(prob_list)
             result = min_max_norm(result * prob_list)
-        return -1 + result[self.current_label]
+        return -1 + result[self.current_label] + np.tanh(np.array(self.current_softmax_result).std())
 
     def reset(self, train_classify_net=True, **kwargs):
         # get initial view

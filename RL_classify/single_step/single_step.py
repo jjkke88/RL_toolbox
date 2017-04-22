@@ -75,7 +75,7 @@ if __name__ == "__main__":
     agent = ClassifyAgent(env, session, baseline, storage, distribution, net, pms)
     agent.storage = Storage(agent , env , baseline, pms)
     env.agent = agent
-    pms.train_flag = True
+    pms.train_flag = False
     if pms.train_flag:
         agent.learn()
     else:

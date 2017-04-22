@@ -31,7 +31,7 @@ class PMS_base(object):
     environment_name = 'ObjectTracker-v2'  # 'environment name')
     min_std = 1.2  # 'the smallest std')
     max_std = 2.4
-    center_adv = True  # 'whether center advantage  # fixed')
+    center_adv = False  # 'whether center advantage  # fixed')
     positive_adv = False  # 'whether positive advantage  # fixed')
     use_std_network = False  # 'whether use network to train std  # it is not supported  # fixed')
     std = 1.1  # 'if the std is set to constant  # then this value will be used')
