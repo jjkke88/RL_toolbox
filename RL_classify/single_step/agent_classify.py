@@ -102,21 +102,19 @@ class ClassifyAgent(TRPOAgent):
         for i in xrange(test_number):
             all_prop_container = []
             current_view , current_label = test_env.generate_new_scence()
-            current_feature = self.env.feature_extract_net.get_feature([current_view])[0]
+            current_feature, all_prop = self.env.feature_extract_net.get_feature_and_prob([current_view])
             image_container = []
             label_container = []
             label_container.append(current_label)
             image_container.append(current_view)
-            all_prop = self.env.classify_path_image_for_test(current_feature)
-            all_prop_container.append(all_prop)
+            all_prop_container.append(all_prop[0])
             for j in xrange(self.pms.max_path_length):
-                action, info = self.get_action(current_feature)
+                action, info = self.get_action(current_feature[0])
                 next_image, _ = test_env.action(action)
-                next_feature = self.env.feature_extract_net.get_feature([next_image])[0]
+                next_feature, all_prob = self.env.feature_extract_net.get_feature_and_prob([next_image])
                 image_container.append(next_image)
                 label_container.append(current_label)
-                all_prop = self.env.classify_path_image_for_test(next_feature)
-                all_prop_container.append(all_prop)
+                all_prop_container.append(all_prob[0])
             result = self.get_test_result(all_prop_container)
             if result == current_label:
                 classify_right_number += 1

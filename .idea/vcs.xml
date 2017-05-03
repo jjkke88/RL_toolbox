@@ -12,5 +12,6 @@
     <mapping directory="$USER_HOME$/gym" vcs="Git" />
     <mapping directory="$USER_HOME$/gym" vcs="Git" />
     <mapping directory="$USER_HOME$/pybox2d" vcs="Git" />
+    <mapping directory="$USER_HOME$/workspace/aq_dl_studio_server" vcs="Git" />
   </component>
 </project>

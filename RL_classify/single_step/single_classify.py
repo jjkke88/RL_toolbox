@@ -116,11 +116,17 @@ def load_dataset():
     train_val_ratio = 0.8
     d = annotation(
         image_set="train" ,
-        data_path="/home/wyp/RL_toolbox/RL_classify/single_step/dataset/" ,
+        data_path="/home/aqrose/RL_toolbox/RL_classify/single_step/dataset/" ,
         with_bbox=with_bbox)
     x , y = d.prepare_keras_data(target_size=224 , color_mode=color_mode)
+    # y = np.concatenate([[np.argmax(y_)] for y_ in y])
     (x_train , y_train) , (x_test , y_test) = seperate_train_val_data(x , y , ratio=train_val_ratio)
-    print y_train
+    y_train = np.concatenate([[np.argmax(y_)] for y_ in y_train])
+    y_test = np.concatenate([[np.argmax(y_)] for y_ in y_test])
+    x_val = x_test
+    y_val = y_test
+    x_test = x_val[:100, :, :, :]
+    y_test = y_val[:100]
     return x_train, y_train, x_test, y_test, x_test, y_test
 
 def conv_layers(net_in):
@@ -311,13 +317,24 @@ X_train , y_train , X_val , y_val , X_test , y_test = load_dataset()
 
 # train
 tl.utils.fit(sess, network, train_op, cost, X_train, y_train, x, y_,
-            acc=acc, batch_size=10, n_epoch=50, print_freq=5,
+            acc=acc, batch_size=32, n_epoch=100      , print_freq=5,
             X_val=X_val, y_val=y_val, eval_train=False)
 
 tl.files.load_and_assign_npz(sess, 'model.npz', network)
 
 # evaluate
-tl.utils.test(sess, network, acc, X_test, y_test, x, y_, batch_size=None, cost=cost)
+from RL_classify.pano_sence_analysis.enviroment import Enviroment
+from RL_classify.single_step.parameters import PMS_base as pms
+test_env = Enviroment(pms.test_file)
+all_view_container = []
+all_label_containr = []
+for i in xrange(500):
+    view, label = test_env.generate_new_scence()
+    all_view_container.append(view)
+    all_label_containr.append(label)
+X_test = np.array(all_view_container)
+y_test = np.array(all_label_containr)
+tl.utils.test(sess, network, acc, X_test, y_test, x, y_, batch_size=32, cost=cost)
 
 # save model
 # tl.files.save_npz(network.all_params , name='model.npz', sess=sess)

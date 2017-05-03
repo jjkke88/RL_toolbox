@@ -2,89 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61f644f3-089a-45f0-9f40-ae28027d188c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/models_image_zooms/model_image_zooms" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/models_pool45_crops/model_pool45_crops" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/detection-2016-nipsws/vgg16_weights.h5" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/alexNet/bvlc_alexnet_model.npy" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/images/2007_000027.jpg" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/images/2007_000032.jpg" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/images/2007_000129.jpg" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/DQN-tensorflow.iml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/caffepb.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/caffe/resolver.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/errors.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/graph.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/layers.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/shapes.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/network.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/tensorflow/transformer.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/kaffe/transformers.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/net/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/base/net/net.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/history_storage.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/imageDealing.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/main.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/alexNet/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/alexNet/bvlc_alexnet.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/annotations/2007_000027.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/annotations/2007_000032.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/datas/annotations/2007_000129.xml" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/caffe/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/caffe/caffepb.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/caffe/resolver.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/errors.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/graph.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/layers.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/shapes.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/tensorflow/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/tensorflow/network.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/tensorflow/transformer.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/kaffe/transformers.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_game_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_tools.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/paramaters_v1.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/test.py" />
-      <change type="NEW" beforePath="" afterPath="$USER_HOME$/gym/gym/envs/object_tracker/xml_ananysizer.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/DQN-tensorflow/config.py" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/config.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/agent.py" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/agent.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/environment.py" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/environment.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/replay_memory.py" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/replay_memory.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/DQN-tensorflow/main.py" afterPath="$USER_HOME$/PycharmProjects/DQN-tensorflow/main.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/dqn-tensorflow/run.sh" afterPath="$USER_HOME$/PycharmProjects/dqn-tensorflow/run.sh" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/config.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/config.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/base.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/base.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/environment.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/environment.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/history.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/history.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/ops.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/ops.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/replay_memory.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/replay_memory.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/utils.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/dqn/utils.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/main.py" afterPath="$USER_HOME$/PycharmProjects/mountainCar-image-tensorflow/main.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/misc.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/modules.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/mountaincar.iml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/mountaincar.iml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/.idea/vcs.xml" afterPath="$USER_HOME$/PycharmProjects/mountaincar/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar/main.py" afterPath="$USER_HOME$/PycharmProjects/mountaincar/main.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/mountaincar_image/README.md" afterPath="$USER_HOME$/PycharmProjects/mountaincar_image/README.md" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/agent/agent_continous_image.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/agent/agent_continous_image.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/experiment/main_multi_process.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/experiment/main_multi_process.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/parameters.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/parameters.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/PycharmProjects/trpo-wyp/storage/storage_image.py" afterPath="$USER_HOME$/PycharmProjects/trpo-wyp/storage/storage_image.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_testing.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_testing.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_training.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/image_zooms_training.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/detection-2016-nipsws/scripts/pool45_crops_testing.py" afterPath="$USER_HOME$/detection-2016-nipsws/scripts/pool45_crops_testing.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/gym/gym/envs/__init__.py" afterPath="$USER_HOME$/gym/gym/envs/__init__.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/gym/gym/envs/classic_control/pendulum.py" afterPath="$USER_HOME$/gym/gym/envs/classic_control/pendulum.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/gym/gym/scoreboard/__init__.py" afterPath="$USER_HOME$/gym/gym/scoreboard/__init__.py" />
-      <change type="MODIFICATION" beforePath="$USER_HOME$/pybox2d/library/Box2D/Box2D.py" afterPath="$USER_HOME$/pybox2d/library/Box2D/Box2D.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/workspace/aq_dl_studio_server/.idea/aq_dl_studio.iml" afterPath="$USER_HOME$/workspace/aq_dl_studio_server/.idea/aq_dl_studio.iml" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/workspace/aq_dl_studio_server/app/api_1_0/classfy_flow.py" afterPath="$USER_HOME$/workspace/aq_dl_studio_server/app/api_1_0/classfy_flow.py" />
+      <change type="MODIFICATION" beforePath="$USER_HOME$/workspace/aq_dl_studio_server/app/model/__init__.py" afterPath="$USER_HOME$/workspace/aq_dl_studio_server/app/model/__init__.py" />
     </list>
     <ignored path="RL_toolbox.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,7 +15,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -105,57 +24,112 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="trpo_continous.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/RLTracking/trpo_continous.py">
+      <file leaf-file-name="single_classify.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/single_classify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+            <state relative-caret-position="15">
+              <caret line="304" column="27" lean-forward="false" selection-start-line="303" selection-start-column="43" selection-end-line="304" selection-end-column="27" />
+              <folding>
+                <element signature="e#4800#10194#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_dataset.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/create_dataset.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="40" column="53" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="53" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="single_step.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/single_step.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="780">
+              <caret line="82" column="15" lean-forward="false" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#4862#7349#0" expanded="false" />
-                <marker date="1484652348517" expanded="false" signature="2757:4827" ph="..." />
+                <element signature="e#677#3033#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="environment.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLTracking/environment.py">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/environment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+            <state relative-caret-position="450">
+              <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
               <folding>
-                <element signature="e#0#61#0" expanded="true" />
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bvlc_alexnet.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/network/alexNet/bvlc_alexnet.py">
+      <file leaf-file-name="agent_classify.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/agent_classify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="1335">
+              <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="100" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enviroment.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/pano_sence_analysis/enviroment.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VggNet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/VggNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+              <folding>
+                <element signature="e#1290#8452#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/pano_sence_analysis/parameters.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VggNet.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/RL_classify/VggNet.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="parameters.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLTracking/parameters.py">
+        <entry file="file://$PROJECT_DIR$/RL_classify/single_step/parameters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RLToolbox/network/kaffe/tensorflow/network.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="495">
+              <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -170,23 +144,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>wyp</find>
+      <find>current_s</find>
+      <find>center</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>aqrose</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/PycharmProjects/DQN-tensorflow" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/workspace/aq_dl_studio_server" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RLToolbox/agent/DQN_agent.py" />
-        <option value="$PROJECT_DIR$/experiment/dqn_mountaincar.py" />
-        <option value="$PROJECT_DIR$/experiment/dqn_InvertedPendulum-v1.py" />
-        <option value="$PROJECT_DIR$/experiment/dqn_Pendulum-v0.py" />
-        <option value="$PROJECT_DIR$/parameters.py" />
-        <option value="$PROJECT_DIR$/experiment/dqn_CartPole-v0.py" />
-        <option value="$PROJECT_DIR$/experiment/trpo_parallel_image.py" />
-        <option value="$PROJECT_DIR$/RLToolbox/environment/gym_environment.py" />
-        <option value="$PROJECT_DIR$/experiment/trpo_parallel.py" />
-        <option value="$PROJECT_DIR$/setup.py" />
-        <option value="$USER_HOME$/tensorflow10/local/lib/python2.7/site-packages/tensorlayer/visualize.py" />
         <option value="$PROJECT_DIR$/experiment/trpo_tracking.py" />
         <option value="$PROJECT_DIR$/experiment/parameters.py" />
         <option value="$USER_HOME$/gym/gym/scoreboard/__init__.py" />
@@ -227,25 +200,27 @@
         <option value="$PROJECT_DIR$/RLTracking/environment.py" />
         <option value="$PROJECT_DIR$/RLTracking/parameters.py" />
         <option value="$PROJECT_DIR$/RLTracking/trpo_continous.py" />
+        <option value="$PROJECT_DIR$/RL_classify/data/SUN360_panoramas_1024x512/train/train.txt" />
+        <option value="$PROJECT_DIR$/RL_classify/data/SUN360_panoramas_1024x512/test/test.txt" />
+        <option value="$USER_HOME$/workspace/aq_dl_studio_server/app/api_1_0/classfy_flow.py" />
+        <option value="$PROJECT_DIR$/RL_classify/agent_classify.py" />
+        <option value="$PROJECT_DIR$/RL_classify/pano_sence_analysis/parameters.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/VggNet.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/agent_classify.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/parameters.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/single_step.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/environment.py" />
+        <option value="$PROJECT_DIR$/RL_classify/single_step/single_classify.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="45" />
-    <option name="y" value="-6" />
-    <option name="width" value="1875" />
-    <option name="height" value="1086" />
+    <option name="x" value="55" />
+    <option name="y" value="24" />
+    <option name="width" value="1865" />
+    <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -261,7 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -269,46 +244,8 @@
               <option name="myItemId" value="RL_toolbox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RL_toolbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DQN-tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RL_toolbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DQN-tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dqn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RL_toolbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DQN-tensorflow" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dqn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alexNet" />
+              <option name="myItemId" value="aq_dl_studio_server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,7 +269,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RLTracking" />
+              <option name="myItemId" value="RL_classify" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,19 +283,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RLToolbox" />
+              <option name="myItemId" value="RL_classify" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="single_step" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/DQN-tensorflow" />
+    <property name="last_opened_file_path" value="$USER_HOME$/aq_studio_server/bin/python2.7" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -376,24 +316,7 @@
       <recent name="$PROJECT_DIR$/RLToolbox/experiment" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.trpo_continous">
-    <configuration default="false" name="list_envs" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/gym/examples/scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="gym" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/gym/examples/scripts/list_envs" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.manage">
     <configuration default="false" name="trpo_tracking" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -424,6 +347,57 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="RL_toolbox" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RLTracking/trpo_continous.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="single_classify" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL_classify/single_step" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RL_toolbox" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL_classify/single_step/single_classify.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/workspace/aq_dl_studio_server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="aq_dl_studio" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/workspace/aq_dl_studio_server/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="single_step" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RL_classify/single_step" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="RL_toolbox" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RL_classify/single_step/single_step.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -562,16 +536,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Python.list_envs" />
-      <item index="1" class="java.lang.String" itemvalue="Python.trpo_tracking" />
-      <item index="2" class="java.lang.String" itemvalue="Python.trpo_continous" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.trpo_tracking" />
+      <item index="1" class="java.lang.String" itemvalue="Python.trpo_continous" />
+      <item index="2" class="java.lang.String" itemvalue="Python.single_classify" />
+      <item index="3" class="java.lang.String" itemvalue="Python.manage" />
+      <item index="4" class="java.lang.String" itemvalue="Python.single_step" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.trpo_continous" />
-        <item index="1" class="java.lang.String" itemvalue="Python.trpo_tracking" />
-        <item index="2" class="java.lang.String" itemvalue="Python.list_envs" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.manage" />
+        <item index="1" class="java.lang.String" itemvalue="Python.single_classify" />
+        <item index="2" class="java.lang.String" itemvalue="Python.single_step" />
+        <item index="3" class="java.lang.String" itemvalue="Python.trpo_continous" />
+        <item index="4" class="java.lang.String" itemvalue="Python.trpo_tracking" />
       </list>
     </recent_temporary>
   </component>
@@ -592,19 +570,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="45" y="-6" width="1875" height="1086" extended-state="6" />
-    <editor active="true" />
+    <frame x="55" y="24" width="1865" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19978401" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13735071" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30793992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36129034" sideWeight="0.5021716" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43669528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30793992" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36129034" sideWeight="0.49782845" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42274678" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4219219" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -719,313 +697,90 @@
           <line>60</line>
           <option name="timeStamp" value="53" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$USER_HOME$/workspace/aq_dl_studio_server/app/api_1_0/classfy_flow.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/RL_classify/single_step/environment.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="54" />
+      <option name="time" value="63" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RLTracking/parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/network/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous_parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_parallel_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/trpo_tracking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="43" />
-          <folding>
-            <element signature="e#689#2770#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/trpo_continous.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="473" column="43" selection-start-line="473" selection-start-column="43" selection-end-line="473" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#4862#7349#0" expanded="false" />
-            <marker date="1484652348517" expanded="false" signature="2757:4827" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="51" column="103" selection-start-line="51" selection-start-column="103" selection-end-line="51" selection-end-column="103" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/parameters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/environment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/network/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous_parallel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_parallel_agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLToolbox/README.md">
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="270">
-            <caret line="18" column="88" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
-          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
-          <folding />
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding />
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/tensorflow10/local/lib/python2.7/site-packages/tensorlayer/layers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="1140" column="8" selection-start-line="1140" selection-start-column="8" selection-end-line="1140" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/tensorflow10/local/lib/python2.7/site-packages/tensorlayer/layers.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/toolbox/distribution/diagonal_gaussian.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
-          <caret line="63" column="44" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="44" />
-          <folding />
+          <caret line="63" column="44" lean-forward="false" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_parallel_agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="701">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-          </folding>
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="488" column="57" selection-start-line="488" selection-start-column="57" selection-end-line="488" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_game_v1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="134" column="52" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="50" column="56" selection-start-line="50" selection-start-column="56" selection-end-line="50" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="189" column="0" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/__init__.py" />
+    <entry file="file://$USER_HOME$/gym/gym/envs/__init__.py" />
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_game_v1.py" />
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_tools.py" />
+    <entry file="file://$USER_HOME$/gym/gym/core.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/alexNet/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/Cifar10.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="22" column="73" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
+          <caret line="22" column="73" lean-forward="false" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="73" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/Vgg16Net.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="98" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-            <element signature="e#2896#10546#0" expanded="false" />
-          </folding>
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/parameters_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RLTracking/checkpoint/checkpoint">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="49" selection-start-line="1" selection-start-column="49" selection-end-line="1" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/parameters_v2.py" />
+    <entry file="file://$PROJECT_DIR$/RLTracking/checkpoint/checkpoint" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/toolbox/baseline/baseline_lstsq.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -1033,124 +788,63 @@
     <entry file="file://$PROJECT_DIR$/RLToolbox/toolbox/baseline/baseline_tensorflow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="13" column="76" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
+          <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/alexNet/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/alexNet/__init__.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/algorithm/TRPO.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
-          <caret line="60" column="47" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#23#0" expanded="false" />
-          </folding>
+          <caret line="60" column="47" lean-forward="false" selection-start-line="60" selection-start-column="47" selection-end-line="60" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/agent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="387" column="0" selection-start-line="372" selection-start-column="2" selection-end-line="387" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/alexNet/bvlc_alexnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/agent.py" />
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/alexNet/bvlc_alexnet.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/environment/gym_environment.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_game_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="119" column="81" selection-start-line="106" selection-start-column="4" selection-end-line="119" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/gym/gym/envs/object_tracker/object_tracker_game_v2.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/agent/TRPO_agent.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="72" column="9" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
-          <folding />
+          <caret line="72" column="9" lean-forward="false" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/kaffe/tensorflow/network.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="57" column="66" selection-start-line="57" selection-start-column="66" selection-end-line="57" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/alexNet/bvlc_alexnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="34" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/kaffe/tensorflow/network.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/dqn/alexNet/bvlc_alexnet.py" />
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/AlexNet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="74" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-            <element signature="e#218#2244#0" expanded="false" />
-          </folding>
+          <caret line="4" column="74" lean-forward="false" selection-start-line="4" selection-start-column="74" selection-end-line="4" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/storage/storage_continous_parallel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
-          <caret line="46" column="88" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
-          <folding />
+          <caret line="46" column="88" lean-forward="false" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLTracking/trpo_tracking.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="85" column="32" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
-          <folding>
-            <element signature="e#689#2770#0" expanded="false" />
-          </folding>
+          <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/kaffe/tensorflow/network.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1158,37 +852,170 @@
     <entry file="file://$PROJECT_DIR$/RLToolbox/network/alexNet/bvlc_alexnet.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding />
+          <caret line="16" column="34" lean-forward="false" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLTracking/parameters.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
+        <state relative-caret-position="180">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLTracking/environment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RLTracking/trpo_continous.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="110" column="35" selection-start-line="110" selection-start-column="35" selection-end-line="110" selection-end-column="35" />
+        <state relative-caret-position="1155">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/data/SUN360_panoramas_1024x512/test/test.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="80" lean-forward="true" selection-start-line="5" selection-start-column="80" selection-end-line="5" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/data/SUN360_panoramas_1024x512/train/train.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="84" lean-forward="true" selection-start-line="13" selection-start-column="84" selection-end-line="13" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/annotation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3660">
+          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/workspace/aq_dl_studio_server/app/api_1_0/classfy_flow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="153" column="53" lean-forward="false" selection-start-line="153" selection-start-column="53" selection-end-line="153" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#1568#2261#0" expanded="false" />
+            <element signature="e#2320#2444#0" expanded="false" />
+            <element signature="e#2490#5585#0" expanded="false" />
+            <element signature="e#5644#5808#0" expanded="false" />
+            <element signature="e#6902#7886#0" expanded="false" />
+            <element signature="e#7930#8090#0" expanded="false" />
+            <element signature="e#8129#8548#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tensorflow12/local/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="942" column="0" lean-forward="false" selection-start-line="942" selection-start-column="0" selection-end-line="942" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/agent_classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/VggNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/VggNet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="175" column="0" lean-forward="false" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding>
+            <element signature="e#1290#8452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/pano_sence_analysis/parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/pano_sence_analysis/enviroment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/environment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/parameters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/single_step.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="82" column="15" lean-forward="false" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#4862#7349#0" expanded="false" />
-            <marker date="1484652348517" expanded="false" signature="2757:4827" ph="..." />
+            <element signature="e#677#3033#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/agent_classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="99" column="49" lean-forward="false" selection-start-line="99" selection-start-column="49" selection-end-line="100" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/create_dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="40" column="53" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="40" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RL_classify/single_step/single_classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="304" column="27" lean-forward="false" selection-start-line="303" selection-start-column="43" selection-end-line="304" selection-end-column="27" />
+          <folding>
+            <element signature="e#4800#10194#0" expanded="false" />
           </folding>
         </state>
       </provider>

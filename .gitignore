@@ -8,3 +8,4 @@ log/
 *.pyc
 *.jpg
 data/
+*.zip

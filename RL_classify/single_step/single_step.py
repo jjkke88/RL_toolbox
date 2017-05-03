@@ -15,7 +15,6 @@ from RLToolbox.network.AlexNet import AlexNet
 from RLToolbox.network.Vgg16Net import NetworkTLVgg
 from RL_classify.single_step.environment import EnvironmentClassify
 from RL_classify.single_step.agent_classify import ClassifyAgent
-import prettytensor as pt
 
 class NetworkTL(Network):
     def __init__(self, scope, pms):
@@ -65,7 +64,7 @@ if __name__ == "__main__":
     config = tf.ConfigProto(log_device_placement=False)
     config.gpu_options.per_process_gpu_memory_fraction = pms.GPU_fraction
     session = tf.Session(config=config)
-    env = EnvironmentClassify(gym.make(pms.environment_name), pms=pms, session=session)
+    env = EnvironmentClassify(None, pms=pms, session=session)
     net = NetworkTL("continous", pms=pms)
     a = [v.name for v in net.var_list]
     print "train variables:", a

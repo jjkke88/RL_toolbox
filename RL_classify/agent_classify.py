@@ -11,7 +11,6 @@ class ClassifyAgent(TRPOAgent):
     def __init__(self , env , session , baseline , storage , distribution , net , pms):
         super(ClassifyAgent , self).__init__(env , session , baseline , storage , distribution , net , pms)
 
-
     def train_paths(self , paths , parallel=False , linear_search=True):
         """
         train with paths data

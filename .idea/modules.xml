@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/DQN-tensorflow.iml" filepath="$USER_HOME$/PycharmProjects/DQN-tensorflow/.idea/DQN-tensorflow.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/RL_toolbox.iml" filepath="$PROJECT_DIR$/.idea/RL_toolbox.iml" />
+      <module fileurl="file://$USER_HOME$/workspace/aq_dl_studio_server/.idea/aq_dl_studio.iml" filepath="$USER_HOME$/workspace/aq_dl_studio_server/.idea/aq_dl_studio.iml" />
       <module fileurl="file://$USER_HOME$/gym/.idea/gym.iml" filepath="$USER_HOME$/gym/.idea/gym.iml" />
     </modules>
   </component>
