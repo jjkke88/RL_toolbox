@@ -307,8 +307,6 @@ if __name__ == "__main__":
     rollouts = params["storage"](None, None, baseline=baseline, pms=pms, net_class=NetworkTLImage)
     learner = params["agent"](learner_env, session=None, baseline=baseline, storage=rollouts, distribution=distribution, net=net, pms=pms, task_q=learner_tasks , result_q=learner_results)
     learner.start()
-
-
     learner_tasks.put(1)
     learner_tasks.join()
     starting_weights = learner_results.get()

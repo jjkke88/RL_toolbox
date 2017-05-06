@@ -43,7 +43,12 @@ def numel(x):
     return np.prod(var_shape(x))
 
 def flatgrad(loss, var_list):
-    grads = tf.gradients(loss, var_list)
+    # var_refs = [v._ref() for v in var_list]
+    grads = tf.gradients(
+        loss, var_list,
+        gate_gradients=False,
+        aggregation_method=None,
+        colocate_gradients_with_ops=False)
     return tf.concat(0, [tf.reshape(grad, [np.prod(var_shape(v))])
                          for (grad, v) in zip( grads, var_list)])
 
