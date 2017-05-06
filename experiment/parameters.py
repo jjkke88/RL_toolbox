@@ -28,13 +28,14 @@ class PMS_base(object):
     positive_adv = False  # 'whether positive advantage  # fixed')
     use_std_network = False  # 'whether use network to train std  # it is not supported  # fixed')
     std = 1.1  # 'if the std is set to constant  # then this value will be used')
-    obs_shape = [100, 100, 3]  # 'dimensions of observation')
+    obs_shape = [3]  # 'dimensions of observation')
     action_shape = 1  # 'dimensions of action')
     min_a = -2.0  # 'the smallest action value')
     max_a = 2.0  # 'the largest action value')
+    max_std = None
     decay_method = "adaptive"  # "decay_method:adaptive  # linear  # exponential") # adaptive  # linear  # exponential
     timestep_adapt = 600  # "timestep to adapt kl")
     kl_adapt = 0.0005  # "kl adapt rate")
-    obs_as_image = True
+    obs_as_image = False
     checkpoint_file = None
     batch_size = int(subsample_factor * paths_number * max_path_length)
