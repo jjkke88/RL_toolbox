@@ -1,5 +1,8 @@
 # RL_toolbox
-## contain some useful reinforcement learning algorithm and relative tools
+## implemented algorithm: trpo a3c
+### a3c:for continous action space, use multi processes, but saving model has not been implemented.
+### trpo:for continous and discrete action space
+## contain some useful reinforcement learning algorithm and relative tool
 
 # to add algorithm
 * A new algorithm class should be defined like `algorithm(self, env, session, baseline, storage, distribution, net, pms)`
