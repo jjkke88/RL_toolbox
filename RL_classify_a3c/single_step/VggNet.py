@@ -22,8 +22,7 @@ class VggNet:
             self.y_softmax_op = tf.nn.softmax(y)
             self.y_op = tf.argmax(self.y_softmax_op, 1)
             self.y_softmax = tf.reduce_max(self.y_softmax_op, 1)
-            self.session.run(tf.global_variables_initializer())
-            self.asyc_parameters()
+            self.asyc_parameters(self.session)
 
     def conv_layers(self, net_in):
         with tf.name_scope('preprocess') as scope:
@@ -157,21 +156,21 @@ class VggNet:
         self.feature = network = tl.layers.DenseLayer(network, n_units=4096,
                                        act=tf.nn.relu,
                                        name='fc2_relu')
-        # network = tl.layers.DenseLayer(network, n_units=26,
-        #                                act=tf.identity,
-        #                                name='fc3_relu')
+        network = tl.layers.DenseLayer(network, n_units=26,
+                                       act=tf.identity,
+                                       name='fc3_relu')
         return network
 
-    def asyc_parameters(self):
+    def asyc_parameters(self , session):
         # print "asyc_parameters"
-        npz = np.load('/home/aqrose/RL_toolbox/data/vgg16_weights.npz')
-        params = []
-        for val in sorted(npz.items()):
-            print("  Loading %s" % str(val[0]))
-            if not val[0].startswith("fc8"):
-                params.append(val[1])
-        tl.files.assign_params(self.session , params , self.net)
-        # tl.files.load_and_assign_npz(self.session, '/home/aqrose/RL_toolbox/data/vgg16_weights.npz', self.net)
+        # npz = np.load('/home/aqrose/RL_toolbox/RL_classify/single_step/model.npz')
+        # params = []
+        # for val in sorted(npz.items()):
+        #     print("  Loading %s" % str(val[0]))
+        #     params.append(val[1])
+        # tl.files.assign_params(session , params , self.net)
+
+        tl.files.load_and_assign_npz(session, '/home/aqrose/RL_toolbox/RL_classify/single_step/model.npz', self.net)
 
     def get_feature_and_prob(self, image_list):
         assert image_list[0].shape == (224, 224, 3)
