@@ -97,7 +97,7 @@ if __name__ == "__main__":
         learner_tasks.join()
         thetas = []
         theta_vs = []
-        while learner_results.empty() is not True:
+        for k in xrange(4):
             delta_theta, delta_theta_v = learner_results.get()
             thetas.append(delta_theta)
             theta_vs.append(delta_theta_v)
