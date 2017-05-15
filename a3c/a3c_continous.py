@@ -60,8 +60,13 @@ class NetworkTLValue(object):
 
 
 if __name__ == "__main__":
-    if not os.path.isdir("./checkpoint"):
-        os.makedirs("./checkpoint")
+    pms = PMS_base()
+    pms.train_flag = True
+    pms.load_model_before_train = False
+    pms.render = False
+    args = pms
+    if not os.path.isdir(pms.checkpoint_dir):
+        os.makedirs(pms.checkpoint_dir)
     if not os.path.isdir("./log"):
         os.makedirs("./log")
     params = {"environment":Environment,
@@ -69,10 +74,7 @@ if __name__ == "__main__":
               "distribution":DiagonalGaussian,
               "storage":ParallelStorage,
               "agent":A3CAgent}
-    pms = PMS_base()
-    pms.train_flag = True
-    # pms.render = True
-    args = pms
+
     args.max_pathlength = gym.spec(args.environment_name).timestep_limit
     learner_tasks = multiprocessing.JoinableQueue()
     learner_results = multiprocessing.Queue()
@@ -86,24 +88,47 @@ if __name__ == "__main__":
         learners.append(learner)
     for learner in learners:
         learner.start()
-    learner_tasks.put(dict(type="GET_PARAM"))
-    learner_tasks.join()
-    # initial net parameters
-    theta, theta_v = learner_results.get()
-    for i in xrange(10000):
-        for k in xrange(4):
-            command = dict(type="TRAIN", action_param=theta, value_param=theta_v)
-            learner_tasks.put(command)
+    if pms.load_model_before_train:
+        data = np.load(os.path.join(pms.checkpoint_dir, "model.npz"))
+        theta = data["theta"]
+        theta_v = data["theta_v"]
+    else:
+        learner_tasks.put(dict(type="GET_PARAM"))
         learner_tasks.join()
-        thetas = []
-        theta_vs = []
-        for k in xrange(4):
-            delta_theta, delta_theta_v = learner_results.get()
-            thetas.append(delta_theta)
-            theta_vs.append(delta_theta_v)
-        # update net
-        theta += np.array(thetas).sum(axis=0)
-        theta_v += np.array(theta_vs).sum(axis=0)
-        # print "theta:" + str(theta)
-        # print "theta_v" + str(theta_v)
+        theta, theta_v = learner_results.get()
+    if pms.train_flag:
+        for i in xrange(pms.max_iter_number):
+            print "#############%d###########" % i
+            if i % pms.save_model_times == 0 and i != 0:
+                ## save model
+                print "save_checkpoint"
+                # learner_tasks.put(dict(type="GET_PARAM"))
+                # learner_tasks.join()
+                # theta, theta_v = learner_results.get()
+                np.savez(os.path.join(pms.checkpoint_dir, "model.npz"), theta=theta, theta_v=theta_v)
+            for k in xrange(pms.jobs):
+                command = dict(type="TRAIN", action_param=theta, value_param=theta_v)
+                learner_tasks.put(command)
+            learner_tasks.join()
+            thetas = []
+            theta_vs = []
+            for k in xrange(pms.jobs):
+                delta_theta, delta_theta_v = learner_results.get()
+                thetas.append(delta_theta)
+                theta_vs.append(delta_theta_v)
+            # update net
+            theta += np.array(thetas).sum(axis=0)
+            theta_v += np.array(theta_vs).sum(axis=0)
+            # print "theta:" + str(theta)
+            # print "theta_v" + str(theta_v)
+            print
+    else:
+        for k in xrange(20):
+            command = dict(type="TEST", action_param=theta, value_param=theta_v)
+            learner_tasks.put(command)
+            learner_tasks.join()
+    for k in xrange(pms.jobs):
+        command = dict(type="STOP", action_param=theta, value_param=theta_v)
+        learner_tasks.put(command)
+    learner_tasks.join()
     exit()

@@ -1,11 +1,12 @@
 
 
 class PMS_base(object):
+    load_model_before_train = False
     history_number = 2  # image history number
-    jobs = 4  # thread or process number
-    max_iter_number = 400  # 'control the max iteration number for trainning')
+    jobs = 8  # thread or process number
+    max_iter_number = 20000  # 'control the max iteration number for trainning')
     paths_number = 1  # 'number of paths in each rollout')
-    max_path_length = 200  # 'timesteps in each path')
+    max_path_length = 400  # 'timesteps in each path')
     batch_size = 100  # 'batch size for trainning')
     max_kl = 0.01  # 'the largest kl distance  # \sigma in paper')
     gae_lambda = 1.0  # 'fix number')
@@ -18,7 +19,7 @@ class PMS_base(object):
     train_flag = True  # 'true for train and False for test')
     iter_num_per_train = 1  # 'iteration number in each trainning process')
     checkpoint_file = ''  # 'checkpoint file path  # if empty then will load the latest one')
-    save_model_times = 2  # 'iteration number to save model  # if 1  # then model would be saved in each iteration')
+    save_model_times = 500  # 'iteration number to save model  # if 1  # then model would be saved in each iteration')
     record_movie = False  # 'whether record the video in gym')
     upload_to_gym = False  # 'whether upload the result to gym')
     checkpoint_dir = 'checkpoint/'  # 'checkpoint save and load path  # for parallel  # it should be checkpoint_parallel')

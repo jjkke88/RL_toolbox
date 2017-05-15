@@ -108,12 +108,13 @@ class A3CAgent(multiprocessing.Process):
         # first run optimizer_op for one time, and then the theta is change, get the new theta and
         # use new theta to minus old theta and get the gradient
         old_theta = self.action_gf()
-        self.session.run(self.action_net.optimizer_op, feed_dict={
+        _, theta_loss = self.session.run([self.action_net.optimizer_op, self.action_net.loss], feed_dict={
             self.action_net.advant: advants,
             self.action_net.action_n:actions,
             self.action_net.states:states
         })
         new_theta = self.action_gf()
+        print "theta loss:" + str(theta_loss)
         return new_theta - old_theta
 
     def get_theta_v_gradient(self, R, states):
@@ -152,8 +153,8 @@ class A3CAgent(multiprocessing.Process):
             rewards.append(reward)
             state = state_next
         path = dict(rewards=rewards, actions=actions, states=states, means=means, log_stds=log_stds)
-        if self.process_id == 0:
-            print "rewards:" + str(np.sum(np.array(path["rewards"])))
+
+        print "rewards:" + str(np.sum(np.array(path["rewards"])))
         return path
 
     def accumulate_gradient(self, path):
@@ -205,12 +206,19 @@ class A3CAgent(multiprocessing.Process):
                 # print "states" + str(path["states"])
                 # print "actions" + str(path["actions"])
                 # accumulate gradient
+
                 self.accumulate_gradient(path)
-                self.task_q.task_done()
                 self.result_q.put((self.delta_theta, self.delta_theta_v))
             elif command["type"] == "GET_PARAM":
                 theta = self.action_gf()
                 theta_v = self.value_gf()
-                self.task_q.task_done()
                 self.result_q.put((theta, theta_v))
+            elif command["type"] == "TEST":
+                action_net_param = command["action_param"]
+                value_net_param = command["value_param"]
+                self.asyc_gradient(action_net_param, value_net_param)
+                path = self.rollout()
+            elif command["type"] == "STOP":
+                break
+            self.task_q.task_done()
         return
